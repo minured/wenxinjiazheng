@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "clamp": "^1.0.1",
+    "easing": "^1.2.1",
+    "jquery": "^3.5.1"
+  }
+}
