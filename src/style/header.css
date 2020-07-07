@@ -541,11 +541,11 @@
 }
 
 .header-content ul li:hover  {
-    border-bottom: 3px solid #FFBD27;
+    border-bottom: 3px solid rgb(202,18,53);
     font-weight: 400;
 }
 
 .csr-header .active {
-    border-bottom: 3px solid #FFBD27;
+    border-bottom: 3px solid rgb(202,18,53);
     font-weight: 700;
 }

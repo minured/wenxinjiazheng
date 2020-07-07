@@ -44,10 +44,11 @@ body, html {
   height: 72px;
 }
 .new-header-fixed img {
+  /*border: 1px solid red;*/
   position: relative;
-  padding: 0 1% 0 10.1%;
-  height: 39.8px;
-  width: 39.8px;
+  padding: 0 1% 0 10%;
+  height: 40px;
+  /*width: 40px;*/
   top: 15px;
 }
 .new-header-fixed span.title {
@@ -71,3 +72,215 @@ body, html {
   letter-spacing: 0;
   padding-right: 2.8%;
 }
+
+.new-header-fixed a.sectionButton {
+  position: absolute;
+  cursor: pointer;
+  right: 10%;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #FFD161;
+  border-radius: 2px;
+  font-family: PingFangSC-Medium;
+  font-size: 14px;
+  color: #3F4156;
+  line-height: 14px;
+  padding: 8px 14px;
+}
+
+#platform {
+  height: 472px;
+  padding: 168px 0 107px 128px;
+  position: relative;
+}
+#platform #platform-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+#platform div {
+  position: relative;
+}
+#platform .title {
+  font-family: PingFangSC-Semibold;
+  font-size: 63px;
+  color: #fff;
+  letter-spacing: 0;
+  padding-bottom: 16px;
+}
+
+#platform .biref {
+  opacity: 0.8;
+  font-family: PingFangSC-Regular;
+  font-size: 28px;
+  color: #fff;
+  letter-spacing: 0;
+  padding-bottom: 60px;
+}
+
+.applyButton {
+  background: #FFD161;
+  border-radius: 6px;
+  font-family: PingFangSC-Semibold;
+  font-size: 24px;
+  color: #121009;
+  letter-spacing: 0;
+  padding: 16px 40px;
+  cursor: pointer;
+}
+
+#platform .playButton {
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 16px 24px;
+  margin-left: 24px;
+  font-family: PingFangSC-Medium;
+  font-size: 24px;
+  color: #FFFFFF;
+  letter-spacing: 0;
+}
+
+#platform .playButton img {
+  border: 1px solid red;
+  margin-top: -5px;
+  height: 29.5px;
+  width: 29.5px;
+  vertical-align: middle;
+  padding-right: 10.5px;
+}
+
+#process {
+  background: #fff;
+  padding: 74px 0;
+  text-align: center;
+}
+
+#process .title {
+  font-family: PingFangSC-Semibold;
+  font-size: 38px;
+  color: #373E36;
+  letter-spacing: 0;
+}
+
+#process .chart {
+  padding: 36px 0 16px 0;
+}
+
+#process .chart .round {
+  background: #FFD161;
+  width: 60px;
+  height: 60px;
+  border-radius: 60px;
+  font-family: PingFangSC-Semibold;
+  font-size: 24px;
+  color: #333333;
+  letter-spacing: 0;
+  text-align: center;
+  display: inline-block;
+  line-height: 60px;
+}
+#process .chart a {
+  background: #E9E9E9;
+  width: 234px;
+  height: 1px;
+  display: inline-block;
+  margin: 0 11.5px;
+  line-height: 60px;
+  vertical-align: middle;
+}
+#process .apply-content {
+  display: flex;
+  justify-content: center;
+}
+#process .apply-content > div + div {
+  padding-left: 68px;
+}
+#process .apply-content > div {
+  box-sizing: content-box;
+  width: 250px;
+  text-align: center;
+  letter-spacing: 0;
+}
+
+#process .apply-content > div span:first-child {
+  font-family: PingFangSC-Semibold;
+  font-size: 23px;
+  color: #333333;
+  padding-bottom: 10px;
+}
+#process .apply-content > div span {
+  display: block;
+}
+
+#process .apply-content > div {
+  box-sizing: content-box;
+  width: 250px;
+  text-align: center;
+  letter-spacing: 0;
+}
+
+#process .apply-content > div span:last-child {
+  font-family: PingFangSC-Regular;
+  font-size: 14px;
+  color: #666666;
+}
+#process .apply-content > div span {
+  display: block;
+}
+
+#rules {
+  padding: 74px 0 76px 0;
+}
+#rules .rules-title {
+  font-family: PingFangSC-Semibold;
+  font-size: 38px;
+  color: #373E36;
+  letter-spacing: 0;
+  text-align: center;
+}
+#rules .rules-content {
+  padding-left: 202px;
+  font-family: PingFangSC-Regular;
+  font-size: 12px;
+  line-height: 18px;
+  color: #666666;
+  text-align: justify;
+}
+#rules .rules-subtitle {
+  font-family: PingFangSC-Semibold;
+  font-size: 16px;
+  color: #111111;
+  padding: 40px 0 32px 197px;
+}
+
+#footer {
+  padding: 62px;
+  text-align: center;
+  background: #333;
+}
+
+#footer div {
+  font-family: PingFangSC-Medium;
+  font-size: 37px;
+  color: #FFFFFF;
+  letter-spacing: 0;
+  text-align: center;
+  bottom: 10px;
+  /*border: 1px solid red;*/
+  margin: 30px;
+}
+.applyButton {
+  background: #FFD161;
+  border-radius: 6px;
+  font-family: PingFangSC-Semibold;
+  font-size: 24px;
+  color: #121009;
+  letter-spacing: 0;
+  padding: 16px 40px;
+  cursor: pointer;
+}
+
+
+

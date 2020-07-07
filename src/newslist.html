@@ -9,65 +9,15 @@
   <meta name="applicable-device" content="pc">
   <link rel="shortcut icon" href="//p1.meituan.net/travelcube/e3e5824a81a19bd254e586be3192d0c01883.png">
 
-  <title>开放平台——温馨家政</title>
-  <!--美团监控系统-->
-  <!-- Cat Start -->
-  <script type="text/javascript">
-    'use strict'
-    !function () {
-      var i = 0 < arguments.length && void 0 !== arguments[0] ? arguments[0] : '_Owl_', n = window
-      n[i] || (n[i] = {
-        isRunning: !1,
-        isReady: !1,
-        preTasks: [],
-        dataSet: [],
-        use: function (i, t) {this.isReady && n.Owl && n.Owl[i](t), this.preTasks.push({api: i, data: [t]})},
-        add: function (i) {this.dataSet.push(i)},
-        run: function () {
-          var t = this
-          if (!this.isRunning) {
-            this.isRunning = !0
-            var i = n.onerror
-            n.onerror = function () {
-              this.isReady || this.add({
-                type: 'jsError',
-                data: arguments
-              }), i && i.apply(n, arguments)
-            }.bind(this), (n.addEventListener || n.attachEvent)('error', function (i) {
-              t.isReady || t.add({
-                type: 'resError',
-                data: [i]
-              })
-            }, !0)
-          }
-        }
-      }, n[i].run())
-    }()
-  </script>
-  <!-- Cat End -->
+  <title>新闻报道--温馨家政</title>
 
-  <link href="./style/platform.css" rel="stylesheet">
-  <style>
-    .csr-header #links .last-link {
-      border: 1px solid red;
-      display: none !important;
-    }
-  </style>
-  <style>
-    .header-content #left {
-      /*border: 1px solid red;*/
-      background-size: 50px 50px;
-      background-position: center;
-      -webkit-background-origin: content-box;
-      background-origin: content-box;
-    }
-  </style>
+
+  <link href="./style/newslist.css" rel="stylesheet">
 </head>
 <body>
-<div id="root">
 
+<div id="root">
   <div class="root">
-    <!--头部：logo、导航栏-->
     <div class="csr-header">
       <div class="header-content">
         <div id="left">
@@ -81,46 +31,48 @@
           <ul id="links">
             <li data-index="0"><a href="./index.html">首页</a></li>
             <li data-index="1"><a href="./joinin.html">入驻加盟</a></li>
-            <li data-index="2" class="active"><a href="./platform.html">开放平台</a></li>
-            <li data-index="3"><a href="./responsibility.html">社会责任</a></li>
-            <li data-index="4" class="last-link"><a href="./downloadApp.html">下载手机版</a></li>
+            <li data-index="2"><a href="./platform.html">开放平台</a></li>
+            <li data-index="3" class="active"><a href="./newslist.html">新闻报道</a></li>
+            <li data-index="4" v-if="false"><a href="//waimai.meituan.com/mobile/download/default">下载手机版</a></li>
           </ul>
         </div>
       </div>
     </div>
+    <div class="m-newslist">
+      <div class="news-list-component">
+        <div class="head">
+          <div class="news-icon"></div>
+          <div class="news">新闻</div>
 
-    <div class="m-platform">
-      <div class="csr-component">
+          <ul class="classify">
+            <li class="active-li" data-index="index">全部</li>
+            <li class="" data-index="index">{{typeList.title}}</li>
 
-        <!--平台 1-->
-        <div class="top platfrom">
-          <!--TODO href-->
-          <a target="_blank" class="outline-yellow" href="http://open.waimai.meituan.com/">
-            <div class="mask"></div>
-            <div class="content">
-              <div class="title">美团外卖C端开放平台</div>
-              <div class="intro">将美团外卖的服务能力全方位输出给合作伙伴，实现流量转化，业态升级</div>
-            </div>
-            <span class="entrance">提供定制化的API和H5</span>
-          </a>
+          </ul>
         </div>
+        <div class="list">
+          <ul>
+            <li class="news" v-for="(news, i) in newList" :key="i">
+              <div class="content">
+                <div class="title">{{news.title}}</div>
+                <div class="para">{{news.preview_content}}</div>
+                <div class="time">
+                  <div class="clock-icon"></div>
+                  {{news.create_time}}
+                </div>
+<!--                <div class="tag">青山计划</div>-->
+              </div>
+            </li>
 
-        <!--平台 2-->
-        <div class="middle platfrom">
-          <!--TODO href-->
-          <a target="_blank" class="outline-yellow" href="http://developer.meituan.com/home?applyFrom=waimai_c_pc_home">
-            <div class="mask"></div>
-            <div class="content">
-              <div class="title">美团点评餐饮开放平台</div>
-              <div class="intro">与连锁品牌及ISV服务商共建高效生态系统，推动餐饮业务提升</div>
-            </div>
-            <span class="entrance">提供外卖、团购等餐饮业务接口</span>
-          </a>
+          </ul>
         </div>
+        <div class="more">点击加载更多新闻</div>
       </div>
     </div>
 
+
     <div class="csr-footer-container">
+      {{msg}}
       <div class="middle-line"></div>
       <div class="csr-footer">
         <div class="footer-content">
@@ -165,8 +117,16 @@
     </div>
   </div>
 </div>
+<script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.0/vue.min.js"></script>
+<script src="./js/newslist.js"></script>
+<!--<script-->
+<!--  src="https://s3plus.meituan.net/v1/mss_e602b0ee72a245fd9997b7276211d882/waimai-pc/js/lib/jquery.min.js"></script>-->
 
-<!--<script src="https://s3plus.meituan.net/v1/mss_e602b0ee72a245fd9997b7276211d882/waimai-pc/js/lib/jquery.min.js"></script>-->
-
+<!--<script type="text/javascript"-->
+<!--        src="//s3plus.meituan.net/v1/mss_4067b040e3364072a20737a5254654ea/waimai-cfe-custom-pc-08ddc77d/production/js/runtime.48b9b964aeb2bb6e38c1.js"></script>-->
+<!--<script type="text/javascript"-->
+<!--        src="//s3plus.meituan.net/v1/mss_4067b040e3364072a20737a5254654ea/waimai-cfe-custom-pc-08ddc77d/production/js/vendor.bdf01714757a16b9359d.js"></script>-->
+<!--<script type="text/javascript"-->
+<!--        src="//s3plus.meituan.net/v1/mss_4067b040e3364072a20737a5254654ea/waimai-cfe-custom-pc-08ddc77d/production/js/newslist.832dc67eb624de0663a3.js"></script>-->
 </body>
 </html>

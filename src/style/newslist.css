@@ -6,163 +6,154 @@ body {
   overflow-x: hidden
 }
 
-.csr-title {
-  font-size: 48px;
+.no-message {
+  width: 300px;
+  height: 178px;
+  margin-top: 120px
+}
+
+.news-list-component {
+  padding-top: 117px;
+  padding-bottom: 10px;
+  font-family: PingFangSC-Regular, Microsoft Yahei, Arial, Helvetica, sans-serif;
+  font-size: 14px;
   color: #333;
-  line-height: 46px;
-  margin-top: 90px;
-  margin-bottom: 60px
-}
-
-.csr-list-title, .csr-title {
-  font-family: PingFangSC-Medium
-}
-
-.csr-list-title {
-  position: relative;
-  font-size: 24px;
-  width: -webkit-fit-content;
-  width: fit-content;
-  margin-top: 60px
-}
-
-.csr-yellow-bar {
-  width: calc(100% + 20px);
-  height: 12px;
-  background-color: #ffd161;
-  position: absolute;
-  top: 21px;
-  z-index: -1
-}
-
-.csr-p {
-  font-family: PingFangSC-Regular;
-  font-size: 16px;
-  text-indent: 32px
-}
-
-.csr-p, .csr-subtitle {
-  color: #333;
-  line-height: 26px;
-  margin-top: 30px
-}
-
-.csr-subtitle {
-  font-family: PingFangSC-Medium;
-  font-size: 20px;
-  margin-bottom: 10px
-}
-
-.m-platform .csr-component {
-  margin: 0 auto 80px;
-  width: 1000px;
-  height: 800px;
-  position: relative
-}
-
-.m-platform .csr-component a {
-  text-decoration: none;
-  color: inherit
-}
-
-.m-platform .csr-component .platfrom {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -ms-flex-align: center;
-  align-items: center;
-  position: absolute;
-  width: 100%;
-  height: 320px
-}
-
-.m-platform .csr-component .platfrom .mask {
-  background-color: #000;
-  width: 100%;
-  height: 320px;
-  position: absolute;
-  left: 0;
-  z-index: 99
-}
-
-.m-platform .csr-component .platfrom .content {
-  position: relative;
-  margin: 84px auto 0;
-  z-index: 999;
-  text-align: center
-}
-
-.m-platform .csr-component .platfrom .content .title {
-  font-size: 40px;
-  font-family: PingFangSC-Semibold, Microsoft Yahei, Arial, Helvetica, sans-serif;
-  color: #fff;
-  height: 40px;
-  margin: 0 auto 16px
-}
-
-.m-platform .csr-component .platfrom .content .intro {
-  font-size: 20px;
-  font-family: PingFangSC-Light, Microsoft Yahei, Arial, Helvetica, sans-serif;
-  color: #fff;
-  height: 20px;
+  width: 900px;
   margin: 0 auto
 }
 
-.m-platform .csr-component .platfrom .entrance {
-  position: absolute;
-  z-index: 999;
-  padding: 12px 40px;
-  background-color: #fff;
+.news-list-component .head {
+  border-bottom: 2px solid #333;
+  padding: 15px 0;
+  display: -ms-flexbox;
+  display: flex
+}
+
+.news-list-component .head .news-icon {
+  background: url(https://p0.meituan.net/travelcube/b8fa9e59c38616c7f6eccbeb09966177212.png) no-repeat;
+  background-size: 100%;
+  height: 15px;
+  width: 14px;
+  display: inline-block;
+  position: relative;
+  top: 4px
+}
+
+.news-list-component .head .news {
+  padding-right: 16px;
+  box-sizing: border-box;
+  border-right: 1px solid #ccc;
   font-size: 16px;
+  font-family: PingFangSC-Medium, Microsoft Yahei, Arial, Helvetica, sans-serif;
   color: #333;
-  font-family: PingFangSC-Semibold, Microsoft Yahei, Arial, Helvetica, sans-serif;
-  bottom: 66px;
+  margin-right: 16px;
+  margin-left: 6px
+}
+
+.news-list-component .head .classify {
+  font-size: 14px;
+  font-family: PingFangSC-Regular, Microsoft Yahei, Arial, Helvetica, sans-serif;
+  color: #333;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center
+}
+
+.news-list-component .head .classify li {
+  padding-right: 20px;
   cursor: pointer
 }
 
-.m-platform .csr-component .platfrom:hover {
-  box-shadow: 0 10px 18px 0 rgba(0, 0, 0, .1)
+.news-list-component .head .classify li:hover {
+  color: rgb(202,18,53);
 }
 
-.m-platform .csr-component .top {
-  top: 130px;
-  background: url(https://p0.meituan.net/travelcube/070c8da7fd580d0ea881a747ac20a9e0551213.png) no-repeat;
-  background-size: 100%
+.news-list-component .list .news {
+  position: relative;
+  padding: 30px 0;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: 1px solid #e5e5e5
 }
 
-.m-platform .csr-component .top .outline-yellow:hover {
-  outline: 3px solid rgb(202,18,53);
-  width: 1000px;
-  height: 320px
+.news-list-component .list .news:last-child {
+  border-bottom: none
 }
 
-.m-platform .csr-component .top .mask {
-  opacity: .35
+.news-list-component .list .news .content {
+  position: relative
 }
 
-.m-platform .csr-component .top .entrance {
-  left: 380px
+.news-list-component .list .news .para {
+  /*border: 1px solid red;*/
+  text-indent: 28;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 20px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 }
 
-.m-platform .csr-component .middle {
-  top: 510px;
-  background: url(https://p0.meituan.net/travelcube/0fef9cf462512902c736d57796542a1d514109.png) no-repeat;
-  background-size: 100%
+.news-list-component .list .news .time {
+  margin-top: 20px;
+  position: absolute;
+  bottom: -5px;
+  right: 0;
+  color: #999
 }
 
-.m-platform .csr-component .middle .outline-yellow:hover {
-  outline: 3px solid rgb(202,18,53);
-  width: 1000px;
-  height: 320px
+.news-list-component .list .news .time .clock-icon {
+  background: url(https://p0.meituan.net/travelcube/079d338e64ea6325e545e1c92df7ff6f655.png) no-repeat;
+  background-size: 100%;
+  width: 11px;
+  height: 11px;
+  margin-right: 10px;
+  display: inline-block
 }
 
-.m-platform .csr-component .middle .mask {
-  opacity: .25
+.news-list-component .list .news .tag {
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  border: 1px solid #999;
+  height: 24px;
+  line-height: 24px;
+  padding: 0 10px;
+  font-size: 14px;
+  color: #999
 }
 
-.m-platform .csr-component .middle .entrance {
-  left: 348px
+.news-list-component .list .news img {
+  min-width: 330px;
+  height: 186px;
+  margin-right: 20px
+}
+
+.news-list-component .list .news .title {
+  width: 700px;
+  font-size: 28px;
+  color: #333;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap
+}
+
+.news-list-component .more {
+  background: hsla(0, 0%, 84.7%, .2);
+  width: 169px;
+  height: 42px;
+  font-size: 14px;
+  color: #666;
+  text-align: center;
+  line-height: 42px;
+  margin: 20px auto 0;
+  cursor: pointer
+}
+
+.active-li {
+  color: rgb(202,18,53)
 }
 
 @media only screen and (max-width: 400px) {
@@ -207,9 +198,8 @@ body {
 .csr-header .header-content #left {
   -ms-flex-pack: center;
   justify-content: center;
-  background: url(../static/img/logo@48h.png) no-repeat;
-
-  background-size: 111px 48px;
+  background: url(//s3plus.meituan.net/v1/mss_4067b040e3364072a20737a5254654ea/waimai-cfe-custom-pc-08ddc77d/production/assets/header-logo-black-64a1f182be.png) no-repeat;
+  background-size: 100%;
   width: 163px;
   height: 48px;
   cursor: pointer
@@ -488,7 +478,13 @@ body {
 
 .active {
   font-family: PingFangSC-Semibold, Microsoft Yahei, Arial, Helvetica, sans-serif;
-  border-bottom: 3px solid rgb(202,18,53);
+  border-bottom: 3px solid rgb(202,18,53)
+
+}
+
+.hold-wrapper {
+  width: 900px;
+  margin: 100px auto 80px
 }
 
 body {

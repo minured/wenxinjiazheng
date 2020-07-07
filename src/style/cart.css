@@ -85,7 +85,7 @@
 }
 
 .shopping-cart .go-pay:active {
-  background-color: #ffd161;
+  background-color: rgb(202,18,53);
 }
 
 .shopping-cart .ready-pay {

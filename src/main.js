@@ -6,6 +6,7 @@ import './js/easing'
 // 首页滚动动画
 var clientHeight = document.documentElement.clientHeight;
 var pagePosition = 0
+
 var pageResize = function() {
     $(window).resize(function() {
         clientHeight = document.documentElement.clientHeight;
@@ -16,6 +17,7 @@ var pageResize = function() {
 var setHeadPicHeight = function() {
     var headPicDOM = $('#headpic');
     var width = headPicDOM.width();
+    console.log(width)
     var height = Math.floor(width / (2880 / 1180));
     headPicDOM.css({ height: height });
 };
