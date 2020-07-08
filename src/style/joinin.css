@@ -61,7 +61,7 @@ body {
 .m-join .csr-component .top {
   width: 100%;
   height: 320px;
-  background: url(https://p0.meituan.net/travelcube/41314fe73969cc15625345027ad94ad51911110.png) no-repeat;
+  background: url(../static/img/joinMain.jpg) no-repeat;
   background-size: 100%;
   margin-bottom: 60px;
   position: relative
@@ -101,7 +101,7 @@ body {
 .m-join .csr-component .bottom .top-left .top-left-image {
   width: 100%;
   height: 320px;
-  background: url(https://p0.meituan.net/travelcube/00a69ad1bfa7ab1c1afdeb7be7a15e451367675.png) no-repeat;
+  background: url(../static/img/joinin1.jpg) no-repeat;
   background-size: 100%
 }
 
@@ -129,7 +129,7 @@ body {
 .m-join .csr-component .bottom .top-right .top-right-image {
   width: 100%;
   height: 320px;
-  background: url(https://p0.meituan.net/travelcube/8085075ad806dbff4204196c61a5e5691144135.png) no-repeat;
+  background: url(../static/img/joinin2.jpg) no-repeat;
   background-size: 100%
 }
 

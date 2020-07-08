@@ -143,10 +143,10 @@ body, html {
 }
 
 #platform .playButton img {
-  border: 1px solid red;
+  /*border: 1px solid red;*/
   margin-top: -5px;
   height: 29.5px;
-  width: 29.5px;
+  width: 40px;
   vertical-align: middle;
   padding-right: 10.5px;
 }

@@ -47,7 +47,7 @@ body {
   font-family: PingFangSC-Medium, Microsoft Yahei, Arial, Helvetica, sans-serif;
   color: #333;
   margin-right: 16px;
-  margin-left: 6px
+  margin-left: 6px;
 }
 
 .news-list-component .head .classify {
@@ -74,7 +74,8 @@ body {
   padding: 30px 0;
   display: -ms-flexbox;
   display: flex;
-  border-bottom: 1px solid #e5e5e5
+  border-bottom: 1px solid #e5e5e5;
+  cursor: pointer;
 }
 
 .news-list-component .list .news:last-child {

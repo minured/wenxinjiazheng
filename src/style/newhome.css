@@ -49,7 +49,7 @@ body {
 .part-1 .headpic {
     width: 100%;
     height: 681px;
-    background: url('../static/img/banner@3x.png') no-repeat;
+    background: url('../static/img/banner.jpg') no-repeat;
     /* background: url('https://p1.meituan.net/1440.590/codeman/d2ab674fa0e4c875865e524d82fe15a34372569.png') no-repeat; */
     background-size: cover;
 }
