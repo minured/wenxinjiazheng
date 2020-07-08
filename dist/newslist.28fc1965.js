@@ -2572,7 +2572,7 @@ new Vue({
   },
   methods: {
     openNewsContent: function openNewsContent(id) {
-      window.open("./newsContent.html?id=".concat(id));
+      window.open("./newsContent.html?id=".concat(id), '_self');
       console.log(window.location);
     },
     loadMore: function loadMore() {

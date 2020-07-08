@@ -14,7 +14,7 @@ new Vue({
   },
   methods:{
     openNewsContent(id){
-      window.open(`./newsContent.html?id=${id}`)
+      window.open(`./newsContent.html?id=${id}`, '_self')
       console.log(window.location)
     },
     loadMore(){
