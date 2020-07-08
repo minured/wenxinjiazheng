@@ -13,6 +13,11 @@
       border-bottom: 1px solid black;
     }
 
+    .back-to-list:hover {
+      color: rgb(202, 18, 53);
+      border-color: rgb(202, 18, 53);
+    }
+
     body {
       margin: 20px 100px;
 
@@ -29,12 +34,13 @@
       margin-right: auto;
     }
 
-    .news h2 {
-      margin-top: 20px;
-      margin-bottom: 10px;
+    .news h2.news-title {
+      text-align: center;
+      margin-top: 30px;
+      margin-bottom: 20px;
     }
 
-    .news .news-content {
+    .news div.news-content {
       line-height: 25px;
       margin-bottom: 20px;
     }
@@ -116,17 +122,9 @@
             <div class="QR-code2"></div>
           </div>
         </div>
-
       </div>
       <div class="bottom">
-        <!--          <div class="qualification-img"></div>-->
-        <!--          <a class="police qualification-text"-->
-        <!--             href="./"-->
-        <!--             target="_blank">北京三快在线科技有限公司</a>-->
         <span class="copyright">©️ gzwxjz.cn 温馨家政月嫂（广州）科技有限公司</span>
-
-        <!--          <div class="img"></div>-->
-        <!--          <span class="police">京公网安备11010502025545号</span>-->
       </div>
     </div>
   </div>
@@ -136,6 +134,7 @@
   src="https://s3plus.meituan.net/v1/mss_e602b0ee72a245fd9997b7276211d882/waimai-pc/js/lib/jquery.min.js"></script>
 
 <script>
+  //检查地址参数 ajax
   $(function () {
     let url = window.location.href
     let newsId = url.split('=')[1]
@@ -152,8 +151,8 @@
         $('.news-content').html(response.data.content.replace('欢迎使用ueditor', ''))
       }
     })
-
   })
+
 
 </script>
 </body>

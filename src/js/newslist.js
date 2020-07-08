@@ -1,9 +1,7 @@
 import axios from 'axios'
 import dayjs from 'dayjs'
-import router from "../router"
-import response from 'vue-resource/src/http/response'
+
 new Vue({
-  router,
   data() {
     return {
       typeList: undefined,
@@ -17,14 +15,17 @@ new Vue({
       window.open(`./newsContent.html?id=${id}`, '_self')
       console.log(window.location)
     },
-    loadMore(){
+    loadMore(e){
       let url_news = `http://api.wxjz.719471.net/mobile/article/article/list?CK=735468c0b41aa74edc66d8e5d82b53ce&category_id=2&pageStartCount=${10}&pageSize=10&is_show=1`
       axios.get(url_news).then(response => {
         let response_news = response.data.data.list
         if (response_news.length > 0) {
           this.newList.push(response.data.data.list)
         } else {
-          window.alert('暂无更多')
+          let el = e.target
+          el.innerText = "暂无更多"
+          $(el).attr("disabled",true).css({"cursor":"not-allowed"});  //禁止点击, 依然会发送,"pointer-events","none"不会发送
+
         }
       }, (r) => {console.log(r)})
     }

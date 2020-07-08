@@ -1,13 +1,142 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="baidu-site-verification" content="QQcWiaCkbW"><meta name="description" content="美团外卖专业品质外卖网，饿了订外卖就上美团外卖。美团外卖覆盖全国各城市优质外卖商家、快餐和特色美食，拥有优秀的外卖网上订餐平台和外卖送餐团队，提供24小时叫外卖、外卖网上订餐服务。"><meta name="keywords" content="外卖,美团外卖,外卖网,外卖网上订餐,美团,美团网"><meta name="applicable-device" content="pc"><link rel="shortcut icon" href="//p1.meituan.net/travelcube/e3e5824a81a19bd254e586be3192d0c01883.png"><title>新闻报道--温馨家政</title><link href="newslist.6a19bca0.css" rel="stylesheet"></head><body> <div id="root"> <div class="root"> <div class="csr-header"> <div class="header-content"> <div id="left"> <div class="logo-pic"></div> <div class="waimai"> <div class="waimai-title"></div> <div class="waimai-slogan"></div> </div> </div> <div id="right"> <ul id="links"> <li data-index="0"><a href="index.html">首页</a></li> <li data-index="1"><a href="joinin.html">入驻加盟</a></li> <li data-index="2"><a href="platform.html">开放平台</a></li> <li data-index="3" class="active"><a href="newslist.html">新闻报道</a></li> <li data-index="4" v-if="false"><a href="//waimai.meituan.com/mobile/download/default">下载手机版</a></li> </ul> </div> </div> </div> <div class="m-newslist"> <div class="news-list-component"> <div class="head"> <div class="news-icon"></div> <div class="news">新闻</div> <ul class="classify"> <li class="active-li" data-index="index">全部</li> <li data-index="index">{{typeList.title}}</li> </ul> </div> <div class="list"> <ul v-for="(news, i) in newList" :key="i">
- <li class="news" @click="openNewsContent(news.id)"> <div class="content"> <div class="title">{{news.title}}</div> <div class="para">{{news.preview_content}}</div> <div class="time"> <div class="clock-icon"></div> {{news.create_time}} </div> </div> </li>
- </ul> </div> <div class="more" @click="loadMore">点击加载更多新闻</div> </div> </div> <div class="csr-footer-container"> <div class="middle-line"></div> <div class="csr-footer"> <div class="footer-content"> <div class="top"> <div class="left"> <ul class="col1">  <li><a target="_blank" href="platform.html">开放平台</a></li> <li><a target="_blank" href="newslist.html">媒体报道</a></li> <li><a target="_blank" href="#">资质规则</a></li> <li><a target="_blank" href="joinin.html">入驻加盟</a></li> </ul> <ul class="col2"> <li><a target="_blank" href="#">常见问题</a></li> <li><a target="" href="javascript:window.alert('请拨打客服热线:123456789')">用户反馈</a></li> <li><a target="_blank" href="#">诚信举报</a></li> <li><a target="_blank" href="#">加入我们</a></li> </ul> </div> <div class="middle"> <div class="cooperation"> <div class="title">品牌合作</div> <div class="content">gzwxjz@126.com</div> </div> <div class="client-service"> <div class="title">客服 xxx-xxxx</div> <div class="content">周一至周日 9:00~23:00<br>客服不受理商务合作</div> </div> </div> <div class="right" style="display:none;"> <div class="right-title">更多商家，更多优惠</div> <div class="QR-code"> <div class="QR-code1"></div> <div class="QR-code2"></div> </div> </div> </div> <div class="bottom">     <span class="copyright">©️ gzwxjz.cn 温馨家政月嫂（广州）科技有限公司</span>   </div> </div> </div> </div> </div>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="baidu-site-verification" content="QQcWiaCkbW">
+  <meta name="description" content="美团外卖专业品质外卖网，饿了订外卖就上美团外卖。美团外卖覆盖全国各城市优质外卖商家、快餐和特色美食，拥有优秀的外卖网上订餐平台和外卖送餐团队，提供24小时叫外卖、外卖网上订餐服务。">
+  <meta name="keywords" content="外卖,美团外卖,外卖网,外卖网上订餐,美团,美团网">
+  <meta name="applicable-device" content="pc">
+  <link rel="shortcut icon" href="//p1.meituan.net/travelcube/e3e5824a81a19bd254e586be3192d0c01883.png">
+
+  <title>新闻报道--温馨家政</title>
+
+
+  <link href="/newslist.977b26a6.css" rel="stylesheet">
+<script src="/newslist.977b26a6.js"></script></head>
+<body>
+
+<div id="root">
+  <div class="root">
+    <div class="csr-header">
+      <div class="header-content">
+        <div id="left">
+          <div class="logo-pic"></div>
+          <div class="waimai">
+            <div class="waimai-title"></div>
+            <div class="waimai-slogan"></div>
+          </div>
+        </div>
+        <div id="right">
+          <ul id="links">
+            <li data-index="0"><a href="/index.html">首页</a></li>
+            <li data-index="1"><a href="/joinin.html">入驻加盟</a></li>
+            <li data-index="2"><a href="/platform.html">开放平台</a></li>
+            <li data-index="3" class="active"><a href="/newslist.html">新闻报道</a></li>
+            <li data-index="4" v-if="false"><a href="//waimai.meituan.com/mobile/download/default">下载手机版</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="m-newslist">
+      <div class="news-list-component">
+        <div class="head">
+          <div class="news-icon"></div>
+          <div class="news">新闻</div>
+
+          <ul class="classify">
+            <li class="active-li" data-index="index">全部</li>
+            <li class="" data-index="index">{{typeList.title}}</li>
+          </ul>
+        </div>
+        <div class="list">
+          <ul v-for="(news, i) in newList" :key="i">
+<!--            <a :href="`./newsContent.html?id=`${news.id}">-->
+              <li class="news" @click="openNewsContent(news.id)">
+                <div class="content">
+                  <div class="title">{{news.title}}</div>
+                  <div class="para">{{news.preview_content}}</div>
+                  <div class="time">
+                    <div class="clock-icon"></div>
+                    {{news.create_time}}
+                  </div>
+                </div>
+              </li>
+<!--            </a>-->
+          </ul>
+        </div>
+        <div class="more" @click="loadMore">点击加载更多新闻</div>
+      </div>
+    </div>
+
+    <div class="csr-footer-container">
+      <div class="middle-line"></div>
+      <div class="csr-footer">
+        <div class="footer-content">
+          <div class="top">
+            <div class="left">
+              <ul class="col1">
+                <!-- TODO 地址 -->
+                <li><a target="_blank" href="/platform.html">开放平台</a></li>
+                <li><a target="_blank" href="/newslist.html">媒体报道</a></li>
+                <li><a target="_blank" href="#">资质规则</a></li>
+                <li><a target="_blank" href="/joinin.html">入驻加盟</a></li>
+              </ul>
+              <ul class="col2">
+                <li><a target="_blank" href="#">常见问题</a></li>
+                <li><a target="" href="javascript:window.alert('请拨打客服热线:020-89662075')">用户反馈</a></li>
+                <li><a target="_blank" href="#">诚信举报</a></li>
+                <li><a target="_blank" href="#">加入我们</a></li>
+              </ul>
+            </div>
+            <div class="middle">
+              <div class="cooperation">
+                <div class="title">品牌合作</div>
+                <div class="content">gzwxjz@126.com</div>
+              </div>
+              <div class="client-service">
+                <div class="title">客服</div>
+                <div class="content">电话: 020-89662075
+                  <br>
+                  周一至周日 9:00~23:00
+                  <br>
+                  客服不受理商务合作
+                </div>
+              </div>
+            </div>
+
+            <div class="right" style="display: none;">
+              <div class="right-title">更多商家，更多优惠</div>
+              <div class="QR-code">
+                <div class="QR-code1"></div>
+                <div class="QR-code2"></div>
+              </div>
+            </div>
+
+          </div>
+          <div class="bottom">
+            <!--          <div class="qualification-img"></div>-->
+            <!--          <a class="police qualification-text"-->
+            <!--             href="./"-->
+            <!--             target="_blank">北京三快在线科技有限公司</a>-->
+            <span class="copyright">©️ gzwxjz.cn 温馨家政月嫂（广州）科技有限公司</span>
+
+            <!--          <div class="img"></div>-->
+            <!--          <span class="police">京公网安备11010502025545号</span>-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
+<script src="https://s3plus.meituan.net/v1/mss_e602b0ee72a245fd9997b7276211d882/waimai-pc/js/lib/jquery.min.js"></script>
 <script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.0/vue.min.js"></script>
-<script src="newslist.bbc18ef4.js"></script>
-<script src="https://s3plus.meituan.net/v1/mss_e602b0ee72a245fd9997b7276211d882/waimai-pc/js/lib/jquery.min.js"></script> 
+<script src="/newslist.28fc1965.js"></script>
 
-
-
-
-
-</body></html>
+<!--<script type="text/javascript"-->
+<!--        src="//s3plus.meituan.net/v1/mss_4067b040e3364072a20737a5254654ea/waimai-cfe-custom-pc-08ddc77d/production/js/runtime.48b9b964aeb2bb6e38c1.js"></script>-->
+<!--<script type="text/javascript"-->
+<!--        src="//s3plus.meituan.net/v1/mss_4067b040e3364072a20737a5254654ea/waimai-cfe-custom-pc-08ddc77d/production/js/vendor.bdf01714757a16b9359d.js"></script>-->
+<!--<script type="text/javascript"-->
+<!--        src="//s3plus.meituan.net/v1/mss_4067b040e3364072a20737a5254654ea/waimai-cfe-custom-pc-08ddc77d/production/js/newslist.832dc67eb624de0663a3.js"></script>-->
+</body>
+</html>

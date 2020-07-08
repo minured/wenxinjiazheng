@@ -9422,24 +9422,23 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 var storylist = [{
   img: './story1.jpg',
-  title1: '美团服务市场',
-  title2: '米粉面馆接入经营助手服务，收入增幅达51.52%',
-  para: '开一家店有多操心？加盟、选址、经营、管理到真正赚钱，期间的辛苦只有每家店老板才深有体会。美团服务市场聚集垂直领域优质服务商，打造一站式服务生态！从新店开业到老店升级、从店铺装修到营销托管、从食材供应到金融服务等，为所有商家提供店铺经营全方位服务，解决经营所遇难题，助力轻松做生意。',
+  title1: '“馨”家政人才市场',
+  title2: '把兼职变成就业，收入更稳定',
+  para: '家政单一直不稳定？拥有家政保洁丰富经验和技能，偶尔有单做和每天有单做收入差距很大，许多人想靠做家政存钱却一直像打零工。“馨”家政人才市场聚焦家政服务市场精准需求，为家政服务人才建成一站式就业服务平台！从寻找客户到匹配客户，从工作过程记录到争议协调，从线上初步沟通到签订电子合同，为所有就业者提供就业过程中全方位指导服务，帮助解决就业所遇难题，助力稳定收入。',
   address: '/story?next_step=/newhome/story/1'
 }, {
   img: './story2.jpg',
-  title1: '美团外卖骑手人物：李君',
-  title2: '为减肥而成为美团兼职骑手，后来副业变“主业”',
-  para: '李君是11位骑手中的一位，来自内蒙古包头市，他近三个月的准时率平均达到了99.9%，满意度100。当问到他知道自己可以去俄罗斯看世界杯时是什么心情，李君说接到电话刚开始不敢相信，后来反应过来就直接飞奔回家拿上身份证就去办加急护照了。开心激动的心情久久难平复……',
+  title1: '“馨”家政 明星月嫂：李明芳',
+  title2: '强大的理论要靠丰富的经验支撑',
+  para: '李阿姨今年45岁，来自浙江湖州市，她接受过专业的月嫂培训，现已有六年月嫂经验，从业以来已经为二十多个家庭的妈妈提供了丰富而科学的护理知识和经验，为新生儿宝宝提供了全面细致的喂养和呵护。有一次护理一个新生宝宝的过程中，李阿姨凭借丰富的经验判断宝宝有新生儿黄疸的早期症状，经过医院及时医治，宝宝很快恢复了健康。',
   address: '/story?next_step=/newhome/story/2'
 }, {
   img: './story3.jpg',
-  title1: '美团外卖骑手人物：徐振',
-  title2: '平凡之路上的英雄梦',
-  para: '我觉得自从成了美团众包骑手之后，遇到了很多有趣新奇的人和事。以前我的生活比较单调，上班、回家两点一线。加入美团众包后，认识了许多朋友，帮助了一些人也得到了一些人的帮助。美团众包，为我的生活打开了一扇新的大门。我喜欢它的弹性、自由，让我对生活有了更多的掌控......',
+  title1: '“馨”家政 明星保姆：刘翠',
+  title2: '把客户当家人才是真用心',
+  para: '“李爷爷和他家人的感谢我觉得都是我应该做的，我自己也有家人，我也希望家人得到好的照顾和关心。”华东地区明星保姆刘翠照顾常州的李爷爷已经三年了，客户家人常在国外，刘大姐知道爷爷患有糖尿病后主动学习糖尿病知识，在李爷爷的日常饮食中严格控制糖分的摄入，用更健康的烹饪方式为李爷爷准备三餐，并协助李爷爷日常监测血糖和服药。',
   address: '/story?next_step=/newhome/story/3'
 }];
-console.log(storylist[0].img);
 var _default = {
   storylist: storylist
 };
@@ -9460,7 +9459,6 @@ var $ = require('./jquery.js');
 
 var easing = require('./easing.js');
 
-console.log(_storyList.default);
 var timer = null;
 var interval = 2500;
 var index = 1; // list
@@ -9493,7 +9491,7 @@ var fillDOM = function fillDOM() {
   // 数据
   for (var i = 0; i < storylistData.length; i++) {
     LIST_DOM += '<li>' + '  <div class="container clearfix" data-link="' + storylistData[i].address + '">' + '    <div class="content">' + '      <h2>' + storylistData[i].title1 + '</h2>' + '      <h3>' + storylistData[i].title2 + '</h3>' + '      <p class="para">' + storylistData[i].para + '</p>' + //                        '      <a class="more" target="_blank" href="' + storylistData[i].address + '">查看详情</a>' +
-    '      <a class="more">查看详情</a>' + '    </div>' + '    <div class="info-img"><img src="' + storylistData[i].img + '" /></div>' + '  <div>' + '</li>';
+    '      ' + '    </div>' + '    <div class="info-img"><img src="' + storylistData[i].img + '" /></div>' + '  <div>' + '</li>';
   }
 
   storyList.html(LIST_DOM); // 下角点
@@ -9593,11 +9591,12 @@ var addEvent = function addEvent() {
   });
   rightArrow.bind('click', function () {
     slideToNext();
-  });
-  $('.part-4 .story-container .story-slider-container .container').click(function () {
-    var link = $(this).data('link');
-    window.open(link);
-  });
+  }); //点击跳转 案例详情
+  // $('.part-4 .story-container .story-slider-container .container').click(function () {
+  //   var link = $(this).data('link')
+  //   window.open(link)
+  // })
+
   navigationButtons.each(function () {
     $(this).bind('click', function () {
       var clickIndex = parseInt($(this).data('index'));
@@ -9622,7 +9621,16 @@ var addEvent = function addEvent() {
 fillDOM();
 play();
 addEvent(); // })
-},{"./jquery.js":"js/jquery.js","./easing.js":"js/easing.js","./story-list":"js/story-list.js"}],"../node_modules/axios/lib/helpers/bind.js":[function(require,module,exports) {
+},{"./jquery.js":"js/jquery.js","./easing.js":"js/easing.js","./story-list":"js/story-list.js"}],"../node_modules/clamp/index.js":[function(require,module,exports) {
+module.exports = clamp
+
+function clamp(value, min, max) {
+  return min < max
+    ? (value < min ? min : value > max ? max : value)
+    : (value < max ? max : value > min ? min : value)
+}
+
+},{}],"../node_modules/axios/lib/helpers/bind.js":[function(require,module,exports) {
 'use strict';
 
 module.exports = function bind(fn, thisArg) {
@@ -11385,85 +11393,21 @@ module.exports.default = axios;
 
 },{"./utils":"../node_modules/axios/lib/utils.js","./helpers/bind":"../node_modules/axios/lib/helpers/bind.js","./core/Axios":"../node_modules/axios/lib/core/Axios.js","./core/mergeConfig":"../node_modules/axios/lib/core/mergeConfig.js","./defaults":"../node_modules/axios/lib/defaults.js","./cancel/Cancel":"../node_modules/axios/lib/cancel/Cancel.js","./cancel/CancelToken":"../node_modules/axios/lib/cancel/CancelToken.js","./cancel/isCancel":"../node_modules/axios/lib/cancel/isCancel.js","./helpers/spread":"../node_modules/axios/lib/helpers/spread.js"}],"../node_modules/axios/index.js":[function(require,module,exports) {
 module.exports = require('./lib/axios');
-},{"./lib/axios":"../node_modules/axios/lib/axios.js"}],"js/news-list.js":[function(require,module,exports) {
+},{"./lib/axios":"../node_modules/axios/lib/axios.js"}],"js/carousel2.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = void 0;
-
-var _axios = _interopRequireDefault(require("axios"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-// 获取新闻构造轮播结构
-var newsList;
-var newsListUrl = "http://api.wxjz.719471.net/mobile/article/article/list?CK=735468c0b41aa74edc66d8e5d82b53ce&category_id=2&pageStartCount=0&pageSize=10&is_show=1";
-(0, _axios.default)(newsListUrl).then(function (response) {
-  newsList = response.data.data.list.slice(0, 6);
-  console.log(newsList);
-});
-var newsListData = [{
-  img: './news1.jpg',
-  title: '保障骑手安心无忧送餐路 美团外卖首发《骑手生活安全指南》',
-  para: '随着大众餐饮消费升级，外卖行业发展迅速。数据显示，2017年美团外卖日完成订单量突破2100万单，稳居行业第一，成绩背后离不开53万外卖骑手的辛勤付出。近日，美团外卖正式发布了《骑手生活安全指南》，为骑手小哥给予全面的生活安全指引，让外卖骑手送餐路上更安全。据了解，这也是配送行业首次针对骑手群体发布的全面生活安全指引。',
-  address: 'http://finance.china.com/jykx/news/11179727/20180820/25257637.html',
-  time: '2018-08-20'
-}, {
-  img: './news2.jpg',
-  title: 'MINISO名创优品正式入驻美团闪购 时尚单品30分钟送达',
-  para: '美团闪购与设计师品牌MINISO名创优品共同发布消息，双方即日起正式开展品牌合作，名创优品在北京、上海、广州、深圳四大城市开设的总计311家门店将全面上线美团闪购，后续合作范围还将进一步延展至全国。',
-  address: 'http://www.cb.com.cn/gdbb/2018_0814/1251484.html',
-  time: '2018-08-14'
-}, {
-  img: './news3.jpg',
-  title: '专业食品安全检测团队进驻美团点评 从此舌尖安全有他们守护',
-  para: '外卖订餐平台对合作商户的食品安全监察力度再次加码。近日,美团点评先后与检科测试集团有限公司、中农孚德检测技术(北京)有限公司(简称“中农孚德”)、Intertek天祥集团等......',
-  address: 'http://life.china.com.cn/2018-08/09/content_102378.html',
-  time: '2018-08-09'
-}, {
-  img: './news4.jpg',
-  title: 'Trustdata发布2018上半年外卖份额数据 美团饿了么百度“631”格局三分天下',
-  para: '报告显示，美团外卖以59%的市场交易额领跑行业，相当于饿了么与百度外卖市场交易额之和的1.5倍，互联网外卖行业呈现出明显的“631”格局。',
-  address: 'http://it.southcn.com/9/2018-08/07/content_182850528.htm',
-  time: '2018-08-07'
-}, {
-  img: './news5.jpg',
-  title: '美团上线闪购业务 以“快”破局助力零售升级',
-  para: '7月18日，美团点评举办“以快破局•助力零售升级” 2018美团闪购发布会，正式上线美团闪购业务，涵盖超市便利、生鲜果蔬、鲜花绿植等众多品类，30分钟配送上门，24小时无间断配送。',
-  address: '//www.sohu.com/a/241956906_100126234',
-  time: '2018-07-18'
-}, {
-  img: './news6.jpg',
-  title: '美团城市新青年 外卖骑手正能量图鉴',
-  para: '一个时代的性格，是青年代表的性格；一个时代的精神，是青年代表的精神。美团外卖骑手群体正是一群努力学习提升自我，努力拼搏承担责任，努力奋斗实现梦想的现代服务业劳动者们，是新青年的典型代表。',
-  address: '//tech.sina.com.cn/d/2018-06-28/doc-iheqpwqy1950144.shtml',
-  time: '2018-06-28'
-}];
-var _default = {
-  newsListData: newsListData
-};
-exports.default = _default;
-},{"axios":"../node_modules/axios/index.js"}],"../node_modules/clamp/index.js":[function(require,module,exports) {
-module.exports = clamp
-
-function clamp(value, min, max) {
-  return min < max
-    ? (value < min ? min : value > max ? max : value)
-    : (value < max ? max : value > min ? min : value)
-}
-
-},{}],"js/carousel2.js":[function(require,module,exports) {
-"use strict";
+exports.interval = void 0;
 
 var _jquery = _interopRequireDefault(require("./jquery"));
 
 var _easing = _interopRequireDefault(require("./easing"));
 
-var _newsList = _interopRequireDefault(require("./news-list"));
-
 var _clamp = _interopRequireDefault(require("clamp"));
+
+var _axios = _interopRequireDefault(require("axios"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -11471,179 +11415,207 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  * 媒体新闻报道轮播
  *
  */
-var interval = 2500;
-var timer = null; // container
+var newsListResponse;
+var newsListData = [];
+var newsListUrl = 'http://api.wxjz.719471.net/mobile/article/article/list?CK=735468c0b41aa74edc66d8e5d82b53ce&category_id=2&pageStartCount=0&pageSize=10&is_show=1'; //获取数据=>轮播
 
-var newsListContainer = (0, _jquery.default)('#news-list-container'); // 左侧新闻列表(ul)
-
-var newsList = (0, _jquery.default)('#news-list'); // 右侧新闻列表(li)
-
-var rightNewsList = (0, _jquery.default)('#news-list-right'); // 小点点
-
-var navigationButtons = (0, _jquery.default)('#news-navigation li'); // current index
-
-var currentIndex = (0, _jquery.default)('#current-index');
-var len = 6;
-var length = 530;
-var index = 1;
-
-var fillDOM = function fillDOM() {
-  var newsListData = _newsList.default.newsListData || []; // 头尾各一张[6, 1, 2, 3, 4, 5, 6, 1]
-
-  var firstStory = newsListData[0];
-  var lastStory = newsListData[newsListData.length - 1];
-  newsListData.push(firstStory);
-  newsListData.unshift(lastStory); // 左侧新闻列表
-
-  var LEFT_NEWS_LIST_DOM = '';
-  var RIGHT_NEWS_LIST_DOM = '';
-
-  for (var i = 0; i < newsListData.length; i++) {
-    // 左侧新闻列表
-    LEFT_NEWS_LIST_DOM += '<li>' + '  <div class="li-container" data-link="' + newsListData[i].address + '">' + '    <div class="img-info">' + '      <img src="' + newsListData[i].img + '" />' + '    </div>' + '    <div class="content">' + '      <h2>' + newsListData[i].title + '</h2>' + '      <div class="divide-line"></div>' + '      <p class="para">' + newsListData[i].para + '</p>' + //                   '      <a target="_blank" href="' + newsListData[i].address + '" class="more">查看详情</a>' +
-    '      <a class="more">查看详情</a>' + '    </div>' + '  </div>' + '</li>'; // 右侧新闻列表
-    // 由于首、尾新增了一条新闻
-    // 所以这块儿是[1-6]
-
-    if (i > 0 && i < newsListData.length - 1) {
-      RIGHT_NEWS_LIST_DOM += '<li data-index=' + i + '><span class="news-list-icon' + i + '"></span><a target="_blank" href="' + newsListData[i].address + '">' + newsListData[i].title + '</a></li>';
-    }
-
-    rightNewsList.html(RIGHT_NEWS_LIST_DOM);
-  }
-
-  newsList.html(LEFT_NEWS_LIST_DOM); // 超出2行添加省略号
-
-  var h2DOMs = (0, _jquery.default)('.part-5 .news-container .news-left .news-list-container ul li .li-container h2');
-  h2DOMs.each(function (index, dom) {
-    (0, _clamp.default)(dom, {
-      clamp: 2
+function getNewsList() {
+  (0, _axios.default)(newsListUrl).then(function (response) {
+    newsListResponse = response.data.data.list.slice(0, 6);
+    console.log(newsListResponse);
+    newsListResponse.forEach(function (item, i) {
+      newsListData.push({
+        img: "./news".concat(i + 1, ".jpg"),
+        title: item.title,
+        para: item.preview_content,
+        address: './newsContent.html?id=' + item.id,
+        time: item.create_time
+      });
     });
-  });
-};
+    console.log(newsListData); //轮播逻辑
 
-var animate = function animate(offset, isStop) {
-  var top = parseInt(newsList.css('top')) + offset;
+    var timer = null; // container
 
-  if (offset > 0) {
-    offset = '+=' + offset;
-  } else {
-    offset = '-=' + Math.abs(offset);
-  } // easeOutBack
+    var newsListContainer = (0, _jquery.default)('#news-list-container'); // 左侧新闻列表(ul)
 
+    var newsList = (0, _jquery.default)('#news-list'); // 右侧新闻列表(li)
 
-  newsList.animate({
-    top: offset
-  }, 500, function () {
-    if (top > -length) {
-      newsList.css({
-        top: -length * len + 'px'
+    var rightNewsList = (0, _jquery.default)('#news-list-right'); // 小点点
+
+    var navigationButtons = (0, _jquery.default)('#news-navigation li'); // current index
+
+    var currentIndex = (0, _jquery.default)('#current-index');
+    var len = 6;
+    var length = 530;
+    var index = 1;
+
+    var fillDOM = function fillDOM() {
+      // var newsListData = newsListData || []
+      // console.log(newsListData)
+      // 头尾各一张[6, 1, 2, 3, 4, 5, 6, 1]
+      var firstStory = newsListData[0];
+      var lastStory = newsListData[newsListData.length - 1];
+      newsListData.push(firstStory);
+      newsListData.unshift(lastStory); // 左侧新闻列表
+
+      var LEFT_NEWS_LIST_DOM = '';
+      var RIGHT_NEWS_LIST_DOM = '';
+
+      for (var i = 0; i < newsListData.length; i++) {
+        // 左侧新闻列表
+        LEFT_NEWS_LIST_DOM += '<li>' + '  <div class="li-container" data-link="' + newsListData[i].address + '">' + '    <div class="img-info">' + '      <img src="' + newsListData[i].img + '" />' + '    </div>' + '    <div class="content">' + '      <h2>' + newsListData[i].title + '</h2>' + '      <div class="divide-line"></div>' + '      <p class="para">' + newsListData[i].para + '</p>' + //                   '      <a target="_blank" href="' + newsListData[i].address + '" class="more">查看详情</a>' +
+        '      <a class="more">查看详情</a>' + '    </div>' + '  </div>' + '</li>'; // 右侧新闻列表
+        // 由于首、尾新增了一条新闻
+        // 所以这块儿是[1-6]
+
+        if (i > 0 && i < newsListData.length - 1) {
+          RIGHT_NEWS_LIST_DOM += '<li data-index=' + i + '><span class="news-list-icon' + i + '"></span><a target="_blank" href="' + newsListData[i].address + '">' + newsListData[i].title + '</a></li>';
+        }
+
+        rightNewsList.html(RIGHT_NEWS_LIST_DOM);
+      }
+
+      newsList.html(LEFT_NEWS_LIST_DOM); // 超出2行添加省略号
+
+      var h2DOMs = (0, _jquery.default)('.part-5 .news-container .news-left .news-list-container ul li .li-container h2');
+      h2DOMs.each(function (index, dom) {
+        (0, _clamp.default)(dom, {
+          clamp: 2
+        });
       });
-    }
+    };
 
-    if (top < -length * len) {
-      newsList.css({
-        top: -length + 'px'
+    var animate = function animate(offset, isStop) {
+      var top = parseInt(newsList.css('top')) + offset;
+
+      if (offset > 0) {
+        offset = '+=' + offset;
+      } else {
+        offset = '-=' + Math.abs(offset);
+      } // easeOutBack
+
+
+      newsList.animate({
+        top: offset
+      }, 500, function () {
+        if (top > -length) {
+          newsList.css({
+            top: -length * len + 'px'
+          });
+        }
+
+        if (top < -length * len) {
+          newsList.css({
+            top: -length + 'px'
+          });
+        }
+
+        !isStop && play();
       });
-    }
+    };
 
-    !isStop && play();
-  });
-};
+    var stop = function stop() {
+      clearTimeout(timer);
+    };
 
-var stop = function stop() {
-  clearTimeout(timer);
-};
+    var handleRest = function handleRest() {
+      // handle currentIndex
+      currentIndex.html('0' + index);
+      /* handle news list
+      rightNewsList
+          .find('li')
+          .eq(index - 1)
+          .addClass('hover')
+          .siblings()
+          .removeClass('hover');
+      */
+      // handle colors
 
-var handleRest = function handleRest() {
-  // handle currentIndex
-  currentIndex.html('0' + index);
-  /* handle news list
-  rightNewsList
-      .find('li')
-      .eq(index - 1)
-      .addClass('hover')
-      .siblings()
-      .removeClass('hover');
-  */
-  // handle colors
-
-  navigationButtons.eq(index - 1).addClass('hover').siblings().removeClass('hover');
-}; // 向下
+      navigationButtons.eq(index - 1).addClass('hover').siblings().removeClass('hover');
+    }; // 向下
 
 
-var slideToPrev = function slideToPrev() {
-  if (newsList.is(':animated')) {
-    return;
-  }
-
-  if (index == 1) {
-    index = len;
-  } else {
-    index = index - 1;
-  } // 清除定时器
-  // 防止：点击上一页后，马上切换到下一页
-
-
-  stop();
-  animate(length);
-  handleRest();
-}; // 向上
-
-
-var slideToNext = function slideToNext() {
-  if (newsList.is(':animated')) {
-    return;
-  }
-
-  if (index == len) {
-    index = 1;
-  } else {
-    index = index + 1;
-  }
-
-  stop();
-  animate(-length);
-  handleRest();
-};
-
-var addEvent = function addEvent() {
-  newsListContainer.hover(stop, play); // 点击打开新闻列表页
-
-  (0, _jquery.default)('.li-container').click(function () {
-    var link = (0, _jquery.default)(this).data('link');
-    window.open(link);
-  });
-  navigationButtons.each(function () {
-    (0, _jquery.default)(this).bind('click', function () {
-      var clickIndex = parseInt((0, _jquery.default)(this).data('index'));
-      var className = (0, _jquery.default)(this).attr('class') || '';
-
-      if (newsList.is(':animated') || className.indexOf('hover') > -1) {
+    var slideToPrev = function slideToPrev() {
+      if (newsList.is(':animated')) {
         return;
       }
 
-      var offset = -length * (clickIndex - index);
-      index = clickIndex;
+      if (index == 1) {
+        index = len;
+      } else {
+        index = index - 1;
+      } // 清除定时器
+      // 防止：点击上一页后，马上切换到下一页
+
+
       stop();
-      animate(offset);
+      animate(length);
       handleRest();
-    });
-  });
-};
+    }; // 向上
 
-var play = function play() {
-  stop();
-  timer = setTimeout(function () {
-    slideToNext();
+
+    var slideToNext = function slideToNext() {
+      if (newsList.is(':animated')) {
+        return;
+      }
+
+      if (index == len) {
+        index = 1;
+      } else {
+        index = index + 1;
+      }
+
+      stop();
+      animate(-length);
+      handleRest();
+    };
+
+    var addEvent = function addEvent() {
+      newsListContainer.hover(stop, play); // 点击打开新闻列表页
+
+      (0, _jquery.default)('.li-container').click(function () {
+        var link = (0, _jquery.default)(this).data('link');
+        window.open(link);
+      });
+      navigationButtons.each(function () {
+        (0, _jquery.default)(this).bind('click', function () {
+          var clickIndex = parseInt((0, _jquery.default)(this).data('index'));
+          var className = (0, _jquery.default)(this).attr('class') || '';
+
+          if (newsList.is(':animated') || className.indexOf('hover') > -1) {
+            return;
+          }
+
+          var offset = -length * (clickIndex - index);
+          index = clickIndex;
+          stop();
+          animate(offset);
+          handleRest();
+        });
+      });
+    };
+
+    var play = function play() {
+      stop();
+      timer = setTimeout(function () {
+        slideToNext();
+        play();
+      }, interval);
+    };
+
+    fillDOM();
     play();
-  }, interval);
-};
+    addEvent();
+    return newsListData;
+  }, function (e) {
+    console.log(e);
+  });
+}
 
-fillDOM();
-play();
-addEvent(); // });
-},{"./jquery":"js/jquery.js","./easing":"js/easing.js","./news-list":"js/news-list.js","clamp":"../node_modules/clamp/index.js"}],"../node_modules/jquery/dist/jquery.js":[function(require,module,exports) {
+getNewsList();
+var interval = 2500;
+exports.interval = interval;
+},{"./jquery":"js/jquery.js","./easing":"js/easing.js","clamp":"../node_modules/clamp/index.js","axios":"../node_modules/axios/index.js"}],"../node_modules/jquery/dist/jquery.js":[function(require,module,exports) {
 var global = arguments[3];
 var process = require("process");
 var define;
@@ -22569,7 +22541,36 @@ require("./js/easing");
 
 //合作案例轮播
 //新闻报道轮播
-// 首页滚动动画
+//首页轮播
+var mySwiper = new Swiper('#case1', {
+  initialSlide: 0,
+  //默认显示第二张图片索引从0开始
+  speed: 2000,
+  //设置过度时间
+  // /* grabCursor: true,//鼠标样式根据浏览器不同而定 */
+  autoplay: {
+    // /*  设置每隔3000毫秒切换 */
+    delay: 2500,
+    // 设置当鼠标移入图片时是否停止轮播
+    disableOnInteraction: false
+  },
+  // <!-- 分页器 -->
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true
+  },
+  // <!-- 导航按钮 上一页下一页 -->
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev'
+  },
+  // <!-- 滚动条 -->
+  scrollbar: {
+    el: '.swiper-scrollbar',
+    hide: true
+  }
+}); // 首页滚动动画
+
 var clientHeight = document.documentElement.clientHeight;
 var pagePosition = 0;
 
@@ -22802,7 +22803,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61303" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55684" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

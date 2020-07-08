@@ -122,7 +122,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./..\\static\\img\\advantage3-1.jpg":[["advantage3-1.bff0649a.jpg","static/img/advantage3-1.jpg"],"static/img/advantage3-1.jpg"],"./..\\static\\img\\advantage3-2.jpg":[["advantage3-2.80a3bec4.jpg","static/img/advantage3-2.jpg"],"static/img/advantage3-2.jpg"],"./..\\static\\img\\advantage3-3.jpg":[["advantage3-3.0b5e8ba3.jpg","static/img/advantage3-3.jpg"],"static/img/advantage3-3.jpg"],"./..\\static\\img\\advantage1.jpg":[["advantage1.b199a9c0.jpg","static/img/advantage1.jpg"],"static/img/advantage1.jpg"],"./..\\static\\img\\advantage2.jpg":[["advantage2.3db05770.jpg","static/img/advantage2.jpg"],"static/img/advantage2.jpg"],"./..\\static\\img\\caseBG.jpg":[["caseBG.3f2ae565.jpg","static/img/caseBG.jpg"],"static/img/caseBG.jpg"],"./..\\static\\img\\logo.png":[["logo.7009af55.png","static/img/logo.png"],"static/img/logo.png"],"./..\\static\\img\\ruzhuBanner.jpg":[["ruzhuBanner.238600b3.jpg","static/img/ruzhuBanner.jpg"],"static/img/ruzhuBanner.jpg"],"_css_loader":"../../../AppData/Roaming/npm/node_modules/parcel/src/builtins/css-loader.js"}],"../../../AppData/Roaming/npm/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./..\\static\\img\\advantage3-1.jpg":[["advantage3-1.bff0649a.jpg","static/img/advantage3-1.jpg"],"static/img/advantage3-1.jpg"],"./..\\static\\img\\advantage3-2.jpg":[["advantage3-2.80a3bec4.jpg","static/img/advantage3-2.jpg"],"static/img/advantage3-2.jpg"],"./..\\static\\img\\advantage3-3.jpg":[["advantage3-3.0b5e8ba3.jpg","static/img/advantage3-3.jpg"],"static/img/advantage3-3.jpg"],"./..\\static\\img\\advantage1.jpg":[["advantage1.b199a9c0.jpg","static/img/advantage1.jpg"],"static/img/advantage1.jpg"],"./..\\static\\img\\advantage2.jpg":[["advantage2.3db05770.jpg","static/img/advantage2.jpg"],"static/img/advantage2.jpg"],"./..\\static\\img\\case1.jpg":[["case1.ccb5a4d5.jpg","static/img/case1.jpg"],"static/img/case1.jpg"],"./..\\static\\img\\case2.jpg":[["case2.306e369b.jpg","static/img/case2.jpg"],"static/img/case2.jpg"],"./..\\static\\img\\logo.png":[["logo.7009af55.png","static/img/logo.png"],"static/img/logo.png"],"./..\\static\\img\\ruzhuBanner.jpg":[["ruzhuBanner.238600b3.jpg","static/img/ruzhuBanner.jpg"],"static/img/ruzhuBanner.jpg"],"_css_loader":"../../../AppData/Roaming/npm/node_modules/parcel/src/builtins/css-loader.js"}],"../../../AppData/Roaming/npm/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -150,7 +150,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61303" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55684" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

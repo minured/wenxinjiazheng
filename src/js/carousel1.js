@@ -9,7 +9,7 @@
 const $ = require('./jquery.js')
 const easing = require('./easing.js')
 import storylistFile from "./story-list"
-console.log(storylistFile)
+
 
 
 
@@ -60,7 +60,7 @@ console.log(storylistFile)
         '      <h3>' + storylistData[i].title2 + '</h3>' +
         '      <p class="para">' + storylistData[i].para + '</p>' +
         //                        '      <a class="more" target="_blank" href="' + storylistData[i].address + '">查看详情</a>' +
-        '      <a class="more">查看详情</a>' +
+        '      ' +
         '    </div>' +
         '    <div class="info-img"><img src="' + storylistData[i].img + '" /></div>' +
         '  <div>' +
@@ -168,11 +168,11 @@ console.log(storylistFile)
       slideToNext()
     })
 
-
-    $('.part-4 .story-container .story-slider-container .container').click(function () {
-      var link = $(this).data('link')
-      window.open(link)
-    })
+    //点击跳转 案例详情
+    // $('.part-4 .story-container .story-slider-container .container').click(function () {
+    //   var link = $(this).data('link')
+    //   window.open(link)
+    // })
 
     navigationButtons.each(function () {
       $(this).bind('click', function () {

@@ -570,10 +570,21 @@ body, html {
   background-image: url("https://s3plus.meituan.net/v1/mss_6b7c26b3db4c4bbebdbb4d7a9bb76633/static-pc/welcome/adv-b-3-n.jpg")
 }
 
-.welcome-container .content .adv-ex {
+.welcome-container .content .adv-ex-1 {
   width: 940px;
   height: 183px;
-  background-image: url("/caseBG.3f2ae565.jpg");
+  background-image: url("/case1.ccb5a4d5.jpg");
+  background-size: 100% 100%;
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+
+.welcome-container .content .adv-ex-2 {
+  width: 940px;
+  height: 183px;
+  background-image: url("/case2.306e369b.jpg");
   background-size: 100% 100%;
   margin-top: 30px;
   display: flex;

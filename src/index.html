@@ -49,6 +49,7 @@
       background-origin: content-box;
     }
   </style>
+  <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -61,7 +62,9 @@
       <!--logo-->
       <a id="left" href="/"
          style="background: url('./static/img/logo@48h.png') no-repeat; color: rgb(255, 255, 255);">
+
         <div class="logo-pic"></div>
+
         <div class="waimai">
           <div class="waimai-title"></div>
           <div class="waimai-slogan"></div>
@@ -106,7 +109,24 @@
       <div class="csr-homecomponent">
         <div class="part-1 page" data-index="0">
           <!--主背景图 图片高度响应页面宽度-->
-          <div id="headpic" class="headpic"></div>
+          <div id="headpic" class="headpic">
+            <!--主banner-->
+            <!-- 轮播容器 -->
+            <div class="swiper-container" id="case1">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"><a href="./index.html"><img src="./static/img/banner.jpg"></a></div>
+                <div class="swiper-slide"><a href="https://www.zhonghongwang.com/show-258-176434-1.html" target="_blank"><img src="./static/img/banner.png" style="width: 1904px; height:780px;"></a></div>
+              </div>
+              <!-- 导航按钮 上一页下一页 -->
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+              <!-- 分页器 -->
+              <div class="swiper-pagination"></div>
+              <!-- 滚动条 -->
+              <div class="swiper-scrollbar"></div>
+            </div>
+
+          </div>
 
           <!--商家,开发者,外卖三部分-->
           <ul class="main-entrance">
@@ -129,7 +149,7 @@
               </a>
             </li>
             <li class="third-li">
-              <a href="/mobile/download/default">
+              <a href="#">
                 <h3 class="clearfix">
                   <i class="fl"></i>
                   <div class="waimai-title fl">我要点外卖</div>
@@ -149,33 +169,33 @@
             <div class="text-part">
               <div class="text-title">品类全覆盖，应有尽有</div>
               <ul class="classified">
-                <!--TODO 选中添加 text-part-picked-->
+
                 <li class="delicacy text-part-picked" data-index="0">
                   <div class="img1 img"></div>
                   <div class="option option1">
-                    <div class="up">美食 Delicacy</div>
-                    <div class="down">大牌优惠</div>
+                    <div class="up">保洁养护 Cleaning & Maintenance</div>
+                    <div class="down">全面无忧</div>
                   </div>
                 </li>
                 <li class="desserts" data-index="1">
                   <div class="img2 img"></div>
                   <div class="option option2">
-                    <div class="up">甜点饮品 Desserts&Drinks</div>
-                    <div class="down">幸福甜蜜</div>
+                    <div class="up">保姆月嫂Nursemaid & Confinement nurse</div>
+                    <div class="down">省心安心</div>
                   </div>
                 </li>
                 <li class="fresh" data-index="2">
                   <div class="img3 img"></div>
                   <div class="option option3">
-                    <div class="up">水果生鲜 Fresh foods</div>
-                    <div class="down">新鲜速达</div>
+                    <div class="up">维修安装Repair & Install</div>
+                    <div class="down">专业高效</div>
                   </div>
                 </li>
                 <li class="supermarket" data-index="3">
                   <div class="img4 img"></div>
                   <div class="option option4">
-                    <div class="up">超市便利 Supermarket</div>
-                    <div class="down">优惠促销</div>
+                    <div class="up">私人定制Private custom</div>
+                    <div class="down">无限可能</div>
                   </div>
                 </li>
               </ul>
@@ -197,12 +217,14 @@
               <div class="story-slider-container" id="story-slider-container">
                 <ul style="left: -980px;" id="story-list">
                   <li>
+                    <!-- 案例数据不是html定义，js写入 -->
                     <div class="content">
-                      <h2>美团外卖骑手人物：刘德淼</h2>
-                      <h3>与美团结缘 源于一次点外卖的特别经历</h3>
+                      <h2>“馨”家政 明星月嫂：李明芳</h2>
+                      <h3>强大的理论要靠丰富的经验支撑</h3>
                       <p class="para">
-                        赴俄罗斯归来骑手刘德淼异常兴奋，第一次出国感受异域风情，第一次在现场看世界杯尽情呐喊，跑单这么久，圆了世界杯的梦，还成为了大家口中的网红，连商家都打趣的说指定让网红来送餐，刘德淼的世界杯之行带上些奇妙的色彩。刘德淼是广东潮州人，2017年8月初入职美团，跑单近一年时间里，最初只能接一单，不敢跑远单......</p>
-                      <a class="more" href="#">查看详情</a>
+                        李阿姨今年45岁，来自浙江湖州市，她接受过专业的月嫂培训，现已有六年月嫂经验，从业以来已经为二十多个家庭的妈妈提供了丰富而科学的护理知识和经验，为新生儿宝宝提供了全面细致的喂养和呵护。有一次护理一个新生宝宝的过程中，李阿姨凭借丰富的经验判断宝宝有新生儿黄疸的早期症状，经过医院及时医治，宝宝很快恢复了健康。
+                      </p>
+                      <!--                      <a class="more" href="#">查看详情</a>-->
                     </div>
                     <!-- <div class="info-img"><img src="/static/img/new2018/static/story1.jpg" /></div> -->
                     <div class="info-img"><img src="./static/img/story1.jpg"/></div>
@@ -272,7 +294,7 @@
               <div class="news-right">
                 <div class="news-title">2018年度媒体报道</div>
                 <ul id="news-list-right" class="news-list"></ul>
-                <div><a class="news-all-button" target="_blank" href="/story?next_step=/newhome/news/list">全部报道<span
+                <div><a class="news-all-button" target="_blank" href="./newslist.html">全部报道<span
                   class="news-arrow"></span></a></div>
               </div>
             </div>
@@ -329,22 +351,26 @@
 
         </div>
         <div class="bottom">
-<!--          <div class="qualification-img"></div>-->
-<!--          <a class="police qualification-text"-->
-<!--             href="./"-->
-<!--             target="_blank">北京三快在线科技有限公司</a>-->
+          <!--          <div class="qualification-img"></div>-->
+          <!--          <a class="police qualification-text"-->
+          <!--             href="./"-->
+          <!--             target="_blank">北京三快在线科技有限公司</a>-->
           <span class="copyright">©️ gzwxjz.cn 温馨家政月嫂（广州）科技有限公司</span>
 
           <!--          <div class="img"></div>-->
-<!--          <span class="police">京公网安备11010502025545号</span>-->
+          <!--          <span class="police">京公网安备11010502025545号</span>-->
         </div>
       </div>
     </div>
   </div>
 </div>
 
-<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<link href="https://cdn.bootcdn.net/ajax/libs/Swiper/5.4.5/css/swiper.min.css" rel="stylesheet">
+<!--<script src="https://www.jq22.com/jquery/jquery-1.10.2.js"></script>-->
+<script src="https://cdn.bootcdn.net/ajax/libs/Swiper/5.4.5/js/swiper.min.js"></script>
 <script src="main.js"></script>
+
 
 </body>
 </html>

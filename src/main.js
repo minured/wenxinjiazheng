@@ -3,8 +3,35 @@ import './js/carousel2'  //新闻报道轮播
 import './js/sidebar'
 import './js/easing'
 
+//首页轮播
+var mySwiper = new Swiper('#case1', {
+    initialSlide: 0, //默认显示第二张图片索引从0开始
+    speed: 2000, //设置过度时间
+    // /* grabCursor: true,//鼠标样式根据浏览器不同而定 */
+    autoplay: {
+        // /*  设置每隔3000毫秒切换 */
+        delay: 2500,
+        // 设置当鼠标移入图片时是否停止轮播
+        disableOnInteraction: false,
+    },
 
+    // <!-- 分页器 -->
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+    // <!-- 导航按钮 上一页下一页 -->
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    // <!-- 滚动条 -->
+    scrollbar: {
+        el: '.swiper-scrollbar',
+        hide: true,
+    },
 
+});
 
 // 首页滚动动画
 var clientHeight = document.documentElement.clientHeight;
@@ -205,6 +232,7 @@ $(".classified").find('li').mouseenter(function(){
 $('.classified').find('li').mouseleave(function(){
     $(this).removeClass('text-part-picked')
 })
+
 
 
 
