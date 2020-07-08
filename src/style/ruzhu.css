@@ -573,7 +573,7 @@ body, html {
 .welcome-container .content .adv-ex {
   width: 940px;
   height: 183px;
-  background-image: url("https://s3plus.meituan.net/v1/mss_6b7c26b3db4c4bbebdbb4d7a9bb76633/static-pc/welcome/border-n.jpg");
+  background-image: url("../static/img/caseBG.jpg");
   background-size: 100% 100%;
   margin-top: 30px;
   display: flex;
@@ -793,7 +793,7 @@ body, html {
   background-repeat: no-repeat;
   background-position: 50%;
   background-size: cover;
-  background-image: url(../static/img/ruzhuMain.jpg);
+  background-image: url(../static/img/ruzhuBanner.jpg);
 }
 
 .welcome-container .title-wrap {

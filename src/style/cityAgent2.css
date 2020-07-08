@@ -72,6 +72,15 @@ body, html {
   letter-spacing: 0;
   padding-right: 2.8%;
 }
+.new-header-fixed span.section a {
+  text-decoration: none;
+  cursor: pointer;
+  font-family: PingFangSC-Regular;
+  font-size: 14px;
+  color: #fff;
+  letter-spacing: 0;
+  padding-right: 2.8%;
+}
 
 .new-header-fixed a.sectionButton {
   position: absolute;

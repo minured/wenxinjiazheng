@@ -6,37 +6,154 @@
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>新闻详情</title>
+  <style>
+    .back-to-list {
+      text-decoration: none;
+      color: black;
+      border-bottom: 1px solid black;
+    }
+
+    body {
+      margin: 20px 100px;
+
+    }
+
+    .newsContent {
+      margin: 0;
+    }
+
+    .news {
+      margin-top: 100px;
+      width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .news h2 {
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+
+    .news .news-content {
+      line-height: 25px;
+      margin-bottom: 20px;
+    }
+
+  </style>
+  <link rel="stylesheet" href="./newsContent.css">
 </head>
 <body>
-<h2 class="title"></h2>
-<div class="newsContent">
+
+<div class="csr-header">
+  <div class="header-content">
+    <div id="left">
+      <div class="logo-pic"></div>
+      <div class="waimai">
+        <div class="waimai-title"></div>
+        <div class="waimai-slogan"></div>
+      </div>
+    </div>
+    <div id="right">
+      <ul id="links">
+        <li data-index="0"><a href="./index.html">首页</a></li>
+        <li data-index="1"><a href="./joinin.html">入驻加盟</a></li>
+        <li data-index="2"><a href="./platform.html">开放平台</a></li>
+        <li data-index="3" class="active"><a href="./newslist.html">新闻报道</a></li>
+        <li data-index="4" style="display: none;"><a href="//waimai.meituan.com/mobile/download/default">下载手机版</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<section class="news">
+  <a href="./newslist.html" class="back-to-list"> 返回列表 </a>
+  <h2 class="news-title"></h2>
+  <div class="news-content"></div>
+</section>
 
 
+<!--尾部：加盟、合作、优惠、客服、备案-->
+<div class="csr-footer-container">
+  <div class="middle-line"></div>
+  <div class="csr-footer">
+    <div class="footer-content">
+      <div class="top">
+        <div class="left">
+          <ul class="col1">
+            <!-- TODO 地址 -->
+            <li><a target="_blank" href="./platform.html">开放平台</a></li>
+            <li><a target="_blank" href="./newslist.html">媒体报道</a></li>
+            <li><a target="_blank" href="#">资质规则</a></li>
+            <li><a target="_blank" href="./joinin.html">入驻加盟</a></li>
+          </ul>
+          <ul class="col2">
+            <li><a target="_blank" href="#">常见问题</a></li>
+            <li><a target="" href="javascript:window.alert('请拨打客服热线:020-89662075')">用户反馈</a></li>
+            <li><a target="_blank" href="#">诚信举报</a></li>
+            <li><a target="_blank" href="#">加入我们</a></li>
+          </ul>
+        </div>
+        <div class="middle">
+          <div class="cooperation">
+            <div class="title">品牌合作</div>
+            <div class="content">gzwxjz@126.com</div>
+          </div>
+          <div class="client-service">
+            <div class="title">客服</div>
+            <div class="content">电话: 020-89662075
+              <br>
+              周一至周日 9:00~23:00
+              <br>
+              客服不受理商务合作
+            </div>
+          </div>
+        </div>
+
+        <div class="right" style="display: none;">
+          <div class="right-title">更多商家，更多优惠</div>
+          <div class="QR-code">
+            <div class="QR-code1"></div>
+            <div class="QR-code2"></div>
+          </div>
+        </div>
+
+      </div>
+      <div class="bottom">
+        <!--          <div class="qualification-img"></div>-->
+        <!--          <a class="police qualification-text"-->
+        <!--             href="./"-->
+        <!--             target="_blank">北京三快在线科技有限公司</a>-->
+        <span class="copyright">©️ gzwxjz.cn 温馨家政月嫂（广州）科技有限公司</span>
+
+        <!--          <div class="img"></div>-->
+        <!--          <span class="police">京公网安备11010502025545号</span>-->
+      </div>
+    </div>
+  </div>
 </div>
 
 <script
   src="https://s3plus.meituan.net/v1/mss_e602b0ee72a245fd9997b7276211d882/waimai-pc/js/lib/jquery.min.js"></script>
 
 <script>
-  $(function(){
+  $(function () {
     let url = window.location.href
-    let newsId = url.split("=")[1]
+    let newsId = url.split('=')[1]
     console.log(newsId)
 
-    let newsContentUrl = "http://api.wxjz.719471.net/mobile/article/article/info?CK=735468c0b41aa74edc66d8e5d82b53ce&id=" + newsId
+    let newsContentUrl = 'http://api.wxjz.719471.net/mobile/article/article/info?CK=735468c0b41aa74edc66d8e5d82b53ce&id=' + newsId
 
     let response = $.ajax({
       url: newsContentUrl,
-      success: function(response){
+      success: function (response) {
         console.log(response)
-        $('.title').text(response.data.title)
-        $('.newsContent').html(response.data.content)
+        document.title = response.data.title
+        $('.news-title').text(response.data.title)
+        $('.news-content').html(response.data.content.replace('欢迎使用ueditor', ''))
       }
     })
 
   })
-
-
 
 </script>
 </body>

@@ -1,5 +1,6 @@
 import $ from 'jquery'
 
+
 //.platform height 响应页面宽度
 
 var clientWidth = document.documentElement.clientWidth
@@ -28,5 +29,10 @@ var pageResize = function() {
 };
 pageResize()
 
+
+//导航栏选中
+$('.section>a').on("click", function() {
+
+})
 
 

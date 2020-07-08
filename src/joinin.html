@@ -19,53 +19,7 @@
 
   <title>入驻加盟--温馨家政</title>
 
-  <!--TODO-->
-  <!-- Cat Start -->
-  <script type="text/javascript">
-    'use strict'
-    !(function () {
-      var i =
-          0 < arguments.length && void 0 !== arguments[0]
-            ? arguments[0]
-            : '_Owl_',
-        n = window
-      n[i] ||
-      ((n[i] = {
-        isRunning: !1,
-        isReady: !1,
-        preTasks: [],
-        dataSet: [],
-        use: function (i, t) {
-          this.isReady && n.Owl && n.Owl[i](t),
-            this.preTasks.push({api: i, data: [t]})
-        },
-        add: function (i) {
-          this.dataSet.push(i)
-        },
-        run: function () {
-          var t = this
-          if (!this.isRunning) {
-            this.isRunning = !0
-            var i = n.onerror;
-            (n.onerror = function () {
-              this.isReady ||
-              this.add({type: 'jsError', data: arguments}),
-              i && i.apply(n, arguments)
-            }.bind(this)),
-              (n.addEventListener || n.attachEvent)(
-                'error',
-                function (i) {
-                  t.isReady || t.add({type: 'resError', data: [i]})
-                },
-                !0
-              )
-          }
-        },
-      }),
-        n[i].run())
-    })()
-  </script>
-  <!-- Cat End -->
+
 
   <link href="./style/joinin.css" rel="stylesheet"/>
   <style>
@@ -161,33 +115,42 @@
   <div class="csr-footer-container">
     <div class="middle-line"></div>
     <div class="csr-footer">
+
       <div class="footer-content">
         <div class="top">
+
           <div class="left">
             <ul class="col1">
-              <li><a target="_blank" href="#">开放平台</a></li>
-              <li><a target="_blank" href="#">媒体报道</a></li>
+              <li><a target="_blank" href="./platform.html">开放平台</a></li>
+              <li><a target="_blank" href="./newslist.html">媒体报道</a></li>
               <li><a target="_blank" href="#">资质规则</a></li>
               <li><a target="_blank" href="#">入驻加盟</a></li>
             </ul>
             <ul class="col2">
-              <li><a target="_blank" href="#">常见问题</a></li>
+              <li><a target="" href="javascript:window.alert('请拨打热线:020-89662075')">常见问题</a></li>
               <li><a target="_blank" href="#">用户反馈</a></li>
               <li><a target="_blank" href="#">诚信举报</a></li>
               <li><a target="_blank" href="#">加入我们</a></li>
             </ul>
           </div>
+
           <div class="middle">
             <div class="cooperation">
               <div class="title">品牌合作</div>
-              <div class="content">wpbg.marketing@meituan.com</div>
+              <div class="content">gzwxjz@126.com</div>
             </div>
             <div class="client-service">
-              <div class="title">客服 1010-9777</div>
-              <div class="content">周一至周日 9:00~23:00<br>客服不受理商务合作</div>
+              <div class="title">客服</div>
+              <div class="content">电话: 020-89662075
+                <br>
+                周一至周日 9:00~23:00
+                <br>
+                客服不受理商务合作
+              </div>
             </div>
           </div>
-          <div class="right">
+
+          <div class="right" style="display: none;">
             <div class="right-title">更多商家，更多优惠</div>
             <div class="QR-code">
               <div class="QR-code1"></div>
@@ -195,10 +158,18 @@
             </div>
           </div>
         </div>
-        <div class="bottom"><span class="copyright">©️ meituan.com 京ICP证070791号 </span>
-          <div class="img"></div>
-          <span class="police">京公网安备11010502025545号</span></div>
+        <div class="bottom">
+          <!--          <div class="qualification-img"></div>-->
+          <!--          <a class="police qualification-text"-->
+          <!--             href="./"-->
+          <!--             target="_blank">北京三快在线科技有限公司</a>-->
+          <span class="copyright">©️ gzwxjz.cn 温馨家政月嫂（广州）科技有限公司</span>
+
+          <!--          <div class="img"></div>-->
+          <!--          <span class="police">京公网安备11010502025545号</span>-->
+        </div>
       </div>
+
     </div>
   </div>
 </div>

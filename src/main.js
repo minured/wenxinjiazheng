@@ -3,6 +3,9 @@ import './js/carousel2'  //新闻报道轮播
 import './js/sidebar'
 import './js/easing'
 
+
+
+
 // 首页滚动动画
 var clientHeight = document.documentElement.clientHeight;
 var pagePosition = 0

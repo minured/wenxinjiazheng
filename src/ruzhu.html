@@ -21,42 +21,7 @@
   <meta name="keyword" content="开店，美团外卖，美团外卖开店" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="renderer" content="webkit" />
-  <script>
-    // 引入cat错误采集模块
-    "use strict"; !function () { var i = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "_Owl_", t = window; t[i] || (t[i] = { isRunning: !1, isReady: !1, preTasks: [], dataSet: [], use: function (i, n) { this.isReady && t.Owl && t.Owl[i](n), this.preTasks.push({ api: i, data: [n] }) }, add: function (i) { this.dataSet.push(i) }, run: function () { var i = this; if (!this.isRunning) { this.isRunning = !0; var n = t.onerror; t.onerror = function () { this.isReady || this.add({ type: "jsError", data: arguments }), n && n.apply(t, arguments) }.bind(this); (t.addEventListener || t.attachEvent)("error", function (t) { i.isReady || i.add({ type: "resError", data: [t] }) }, !0) } } }, t[i].run()) }();
-    !function (e, t, n) { function s() { var e = t.createElement("script"); e.async = !0, e.src = "https://s0.meituan.net/bs/js/?f=mta-js:mta.min.js"; var n = t.getElementsByTagName("script")[0]; n.parentNode.insertBefore(e, n) } if (e.MeituanAnalyticsObject = n, e[n] = e[n] || function () { (e[n].q = e[n].q || []).push(arguments) }, "complete" === t.readyState) s(); else { var r = "addEventListener", i = "attachEvent"; if (e[r]) e[r]("load", s, !1); else if (e[i]) e[i]("onload", s); else { var a = e.onload; e.onload = function () { s(), a && a() } } } }(window, document, "mta"), function (e, t, n) { if (t && !("_mta" in t)) { t._mta = !0; var s = e.location.protocol; if ("file:" !== s) { var r = e.location.host, i = t.prototype.open; t.prototype.open = function (t, n, a, o, h) { if (this._method = "string" == typeof t ? t.toUpperCase() : null, n) { if (0 === n.indexOf("http://") || 0 === n.indexOf("https://") || 0 === n.indexOf("//")) this._url = n; else if (0 === n.indexOf("/")) this._url = s + "//" + r + n; else { var l = s + "//" + r + e.location.pathname; l = l.substring(0, l.lastIndexOf("/") + 1), this._url = l + n } var u = this._url.indexOf("?"); -1 !== u ? (this._searchLength = this._url.length - 1 - u, this._url = this._url.substring(0, u)) : this._searchLength = 0 } else this._url = null, this._searchLength = 0; return this._startTime = (new Date).getTime(), i.apply(this, arguments) }; var a = "onreadystatechange", o = "addEventListener", h = t.prototype.send; t.prototype.send = function (t) { function n(n, r) { if (0 !== n._url.indexOf(s + "//frep.meituan.net/_.gif")) { for (var i = "browser.ajax", a = [98, 114, 111, 119, 115, 101, 114, 46, 97, 106, 97, 120], o = 0, h = i.length; h > o; o++)if (i.charCodeAt(o) !== a[o]) return; var l; if (n.response) switch (n.responseType) { case "json": l = JSON && JSON.stringify(n.response).length; break; case "blob": case "moz-blob": l = n.response.size; break; case "arraybuffer": l = n.response.byteLength; case "document": l = n.response.documentElement && n.response.documentElement.innerHTML && n.response.documentElement.innerHTML.length + 28; break; default: l = n.response.length }e.mta("send", i, { url: n._url, method: n._method, error: !(0 === n.status.toString().indexOf("2") || 304 === n.status), responseTime: (new Date).getTime() - n._startTime, requestSize: n._searchLength + (t ? t.length : 0), responseSize: l || 0 }) } } if (o in this) { var r = function (e) { n(this, e) }; this[o]("load", r), this[o]("error", r), this[o]("abort", r) } else { var i = this[a]; this[a] = function (t) { i && i.apply(this, arguments), 4 === this.readyState && e.mta && n(this, t) } } return h.apply(this, arguments) } } } }(window, window.XMLHttpRequest, "mta");
-    // 初始化项目
-    mta("create", "578d9915bd1349ba14c5e119");
-    // 推荐设置上报地址为 HTTPS 协议，以获得更高的数据准确性，默认会和页面协议一致
-    mta("config", "beaconImage", "https://frep.meituan.com/_.gif");
-    // 发送页面性能指标，包括 ttfb（首字节）、domReady（可交互）、load（完全加载）等
-    mta("send", "page");
-  </script>
-  <script type="text/javascript">
-    !(function (win, doc, ns) {
-      var cacheFunName = '_MeiTuanALogObject';
-      win[cacheFunName] = ns;
-      if (!win[ns]) {
-        var _LX = function () {
-          _LX.q.push(arguments);
-          return _LX;
-        };
-        _LX.q = _LX.q || [];
-        _LX.l = +new Date();
-        win[ns] = _LX;
-      }
-    })(window, document, 'LXAnalytics');
 
-    LXAnalytics("config", "useQR", true);
-    LXAnalytics("config", "onWebviewAppearAutoPV", false);
-    LXAnalytics("set", "appnm", 'waimai_e_center');
-    LXAnalytics("set", "category", 'waimai_e');
-
-    //手动发送PV代码示例，最后一个参数为本次PV指定的cid
-    //在合适时机执行此代码，即可发送一条PV事件
-    // let environment = {xx:'xxx',...}; // or null
-    LXAnalytics('pageView', null, null, "c_waimai_e_6zocw67f");
-  </script>
 <link href="./style/ruzhu.css" rel="stylesheet"></head>
 
 <body>
@@ -77,7 +42,7 @@
               <li><a class="tab-link " href="#flow" type="flow">开店流程</a></li>
               <li><a class="tab-link " href="#require" type="require">开店要求</a></li>
               <!-- <li><a class="tab-link " href="javascript:;" type="cost">资费查询</a></li> -->
-              <li><a class="tab-link " href="javascript:;" type="question">开店帮助</a></li>
+              <li style="display: none"><a class="tab-link " href="javascript:;" type="question">开店帮助</a></li>
               <li><a href="javascript:;" class="open-store bold fix-btn">申请入驻</a></li>
             </ul>
           </nav>
@@ -375,128 +340,9 @@
           </div>
         </div>
       </section>
-      <!-- 资费查询 -->
-      <!-- <section id="cost" class="cost">
-        <div class="cost-content">
-          <h2 class="title">
-            资费查询
-          </h2>
-          <div class="city-food-select">
-            <div class="select ctiy" id="citySelect">
-              <div class="text" id="cityName">请选择城市</div>
-              <div class="arrow-down"></div>
-            </div>
-            <div class="select food" id="foodSelect">
-              <div class="text" id="cateName">美食</div>
-              <div class="arrow-down"></div>
-            </div>
-            <div class="select-city" style="display: none">
-              <ul class="s-city s-city-1" id="provinces">
-              </ul>
-              <ul class="s-city s-city-1" id="cities">
-              </ul>
-            </div>
-            <div class="select-food" style="display: none">
-              <ul class="s-city s-food" id="category">
-              </ul>
-            </div>
-          </div>
-          <div class="cost-radio">
-            <div class="cost-left">
-              <div class="item item1">
-                <div class="icon icon1"></div>
-                <div class="num-empty">
-                  <div class="long"></div>
-                  <div class="long"></div>
-                  <div class="short"></div>
-                  <div class="long"></div>
-                  <div class="long"></div>
-                </div>
-                <div class="rate" style="display: none">
-                  <span id="selfMin">-</span>%~<span id="selfMax">-</span>%
-                </div>
-                <div class="dispatching">
-                  自己配送费率
-                </div>
-              </div>
-              <div class="item item2">
-                <div class="icon icon2"></div>
-                <div class="num-empty">
-                  <div class="long"></div>
-                  <div class="long"></div>
-                  <div class="short"></div>
-                  <div class="long"></div>
-                  <div class="long"></div>
-                </div>
-                <div class="rate" style="display: none">
-                  <span id="mtMin">-</span>%~<span id="mtMax">-</span>%
-                </div>
-                <div class="dispatching">
-                  美团配送费率
-                </div>
-              </div>
-            </div>
-            <div class="cost-right">
-              <h3 class="c-title bold">收费说明：</h3>
-              <dl>
-                <dt>
-                  <p class="c-detail">
-                    1、商户在美团外卖开店不收取开店相关费用，当产生外卖订单时会按照最终签约的费率收取费用。
-                  </p>
-                </dt>
-                <dt>
-                  <p class="c-detail">
-                    2、此页面展示的费率仅做参考，具体签约的费率与您选择的经营品类、配送方式及合作细节有关，请以提交开店申请后收到的签约信息中展示的费率为准。
-                  </p>
-                </dt>
-              </dl>
-            </div>
-          </div>
-        </div>
-      </section> -->
-      <!-- 常见问题 -->
+
       <section id="question" class="question">
-        <!-- <div class="quest-content">
-          <h2 class="title">
-            常见问题
-          </h2>
-          <dl class="quest-list">
-            <dt class="quest-item">
-              <h4 class="quest-title bold">1. 美团外卖开店审核通过拿到账号密码后，是否就能上线营业了？</h4>
-              <p class="quest-cont">
-                不能，需要补充商品等资料后等待业务经理到店完成线下审核后才能上线。
-              </p>
-            </dt>
 
-            <dt class="quest-item">
-              <h4 class="quest-title bold">2. 有工作人员可以帮忙或者咨询吗？</h4>
-              <p class="quest-cont">
-                提交申请信息后，3个工作日内将会有市场人员电话联系您并提供相应的帮助，请注意接听010开头座机电话。
-              </p>
-            </dt>
-
-            <dt class="quest-item">
-              <h4 class="quest-title bold">3. 新商户在美团外卖开店有什么福利？</h4>
-              <p class="quest-cont">
-                新入驻商家均可享受免费排名特权，助力商家开门大吉，早日成单。
-              </p>
-            </dt>
-
-            <dt class="quest-item">
-              <h4 class="quest-title bold">4. 提交审核后如何查审核状态？</h4>
-              <p class="quest-cont">
-                当您成功提交申请后，工作人员会对您的资料进行审核，您可以打开美团外卖商户端App了解当前审核状态。
-              </p>
-            </dt>
-
-            <dt class="quest-item">
-              <h4 class="quest-title bold">5. 审核状态需修改或未通过？</h4>
-              <p class="quest-cont">
-                需修改表示您提交的资料未通过审核，请根据提示原因修改后再次提交；未通过表示您填写的经营项目或资质暂不支持入驻美团外卖。
-              </p>
-            </dt>
-          </dl>
-        </div> -->
       </section>
     </div>
   </div>
@@ -507,10 +353,10 @@
 <!--    <a href="javascript:;" class="f-open-store bold">-->
 <!--      申请开店-->
 <!--    </a>-->
-    <a href="https://waimai.meituan.com/" class="waimai-logo">
-<!--      <img width="101px" height="62px" src="https://p0.meituan.net/scarlett/dfd0bf1fe85c7d20f880d6056e214c845536.png" />-->
+    <a href="./index.html" class="wxjz-logo" style="margin-top: 10px;">
+      <img width="100px" height="100px" src="./static/img/ruzhuQRCode.png" />
     </a>
-    <p class="cy-text">暂无实体店铺，去看看<span class="cy-link">餐饮加盟></span></p>
+<!--    <p class="cy-text">暂无实体店铺，去看看<span class="cy-link">餐饮加盟></span></p>-->
   </footer>
   <div class="video-wrapper">
     <video poster="" controlslist="nodownload" controls="" class="video-item" id="video">
@@ -530,22 +376,7 @@
   </div>
   <script src="https://analytics.meituan.net/analytics.js" async defer></script>
   <script crossorigin="anonymous" src="https://www.dpfile.com/app/owl/static/owl_1.5.28.js"></script>
-  <script>
-    var urlQueryObj ={"source":"1"};//用node服务器把请求完整参数写入页面，不采用直接从url中提取的方法
-    //  cat监控-需要配置start并传入相关配置后才能开始监控
-    Owl.start({
-      // 建议使用前端项目名，web项目名
-      project: 'waimai_e_kaidian_web_pc',
 
-      pageUrl: 'welcome'
-    });
-    var MT = window.MT = {};
-    MT.FORMRENDER = {"source":"1","query":{"source":"1"},"confData":{"coreData":[{"title":"用户","content":"海量","addition1":"","addition2":"","priority":10,"channel":0},{"title":"覆盖","content":"全国","addition1":"","addition2":"","priority":20,"channel":0},{"title":"商家","content":"优质","addition1":"","addition2":"","priority":30,"channel":0}],"tabsTitleList":[]}};//若ejs页面使用formRender模块渲染的则会有此字段数据
-    delete MT.FORMRENDER._locals;
-    delete MT.FORMRENDER.enrouten;
-    delete MT.FORMRENDER.settings;
-    delete MT.FORMRENDER.cache;
-  </script>
   <script src="https://s3plus.meituan.net/v1/mss_6b7c26b3db4c4bbebdbb4d7a9bb76633/static-pc/js/zepto.min.js"></script>
   <script type="text/javascript" src="./js/ruzhu.js"></script>
 </body>

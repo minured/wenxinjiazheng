@@ -3,7 +3,7 @@
  *
  */
 
-// define(['./jquery.js', './easing.js', './news-list.js'], function($, easing, newsListDataFile) {
+
 
 import $  from './jquery'
 import easing from './easing'
