@@ -1,16 +1,7 @@
 <!DOCTYPE HTML>
 
 
-<!-- [if IE 9]>
-<html class="ie9"><![endif]-->
-<!--[if IE 8]>
-<html class="ie8"><![endif]-->
-<!--[if IE 7]>
-<html class="ie7"><![endif]-->
-<!--[if IE 6]>
-<html class="ie6"><![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!-->
-<html><!--<![endif] -->
+<html>
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -22,22 +13,21 @@
 
   <title>温馨家政</title>
 
-  <!--图标-->
   <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="./static/img/favicon_1.ico">
   <link rel="icon" href="./static/img/favicon_1.ico" size="16x16 32x32">
-
 
   <link rel="stylesheet" href="./style/newhome.css"/>
 
   <style>
     .header-content #left {
-      /*border: 1px solid red;*/
+
       background-size: 50px 50px;
       background-position: center;
       -webkit-background-origin: content-box;
       background-origin: content-box;
     }
   </style>
+  <script src = "https://cdn.polyfill.io/v2/polyfill.min.js"></script>
   <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
@@ -66,7 +56,6 @@
           <li data-index="1"><a href="./joinin.html">入驻加盟</a></li>
           <li data-index="2"><a href="./platform.html">开放平台</a></li>
           <li data-index="3"><a href="./newslist.html">新闻报道</a></li>
-          <li data-index="4" style="display: none;"><a href="./downloadApp.html">下载手机版</a></li>
         </ul>
       </div>
     </div>
@@ -103,8 +92,12 @@
             <!-- 轮播容器 -->
             <div class="swiper-container" id="case1">
               <div class="swiper-wrapper">
-                <div class="swiper-slide"><a href="./index.html"><img src="./static/img/banner.jpg"></a></div>
-                <div class="swiper-slide"><a href="https://www.zhonghongwang.com/show-258-176434-1.html" target="_blank"><img src="./static/img/banner.png" style="width: 1904px; height:780px;"></a></div>
+                <div class="swiper-slide">
+                  <a href="./index.html"><img src="./static/img/banner.jpg"></a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="https://www.zhonghongwang.com/show-258-176434-1.html" target="_blank"><img src="./static/img/banner.png" style="width: 1904px; height:780px;"></a>
+                </div>
               </div>
               <!-- 导航按钮 上一页下一页 -->
               <div class="swiper-button-prev"></div>
@@ -169,21 +162,21 @@
                 <li class="desserts" data-index="1">
                   <div class="img2 img"></div>
                   <div class="option option2">
-                    <div class="up">保姆月嫂Nursemaid & Confinement nurse</div>
+                    <div class="up">保姆月嫂 Nursemaid & Confinement nurse</div>
                     <div class="down">省心安心</div>
                   </div>
                 </li>
                 <li class="fresh" data-index="2">
                   <div class="img3 img"></div>
                   <div class="option option3">
-                    <div class="up">维修安装Repair & Install</div>
+                    <div class="up">维修安装 Repair & Install</div>
                     <div class="down">专业高效</div>
                   </div>
                 </li>
                 <li class="supermarket" data-index="3">
                   <div class="img4 img"></div>
                   <div class="option option4">
-                    <div class="up">私人定制Private custom</div>
+                    <div class="up">私人定制 Private custom</div>
                     <div class="down">无限可能</div>
                   </div>
                 </li>
@@ -213,7 +206,6 @@
                       <p class="para">
                         李阿姨今年45岁，来自浙江湖州市，她接受过专业的月嫂培训，现已有六年月嫂经验，从业以来已经为二十多个家庭的妈妈提供了丰富而科学的护理知识和经验，为新生儿宝宝提供了全面细致的喂养和呵护。有一次护理一个新生宝宝的过程中，李阿姨凭借丰富的经验判断宝宝有新生儿黄疸的早期症状，经过医院及时医治，宝宝很快恢复了健康。
                       </p>
-                      <!--                      <a class="more" href="#">查看详情</a>-->
                     </div>
                     <!-- <div class="info-img"><img src="/static/img/new2018/static/story1.jpg" /></div> -->
                     <div class="info-img"><img src="./static/img/story1.jpg"/></div>
@@ -356,7 +348,6 @@
 
 
 <link href="https://cdn.bootcdn.net/ajax/libs/Swiper/5.4.5/css/swiper.min.css" rel="stylesheet">
-<!--<script src="https://www.jq22.com/jquery/jquery-1.10.2.js"></script>-->
 <script src="https://cdn.bootcdn.net/ajax/libs/Swiper/5.4.5/js/swiper.min.js"></script>
 <script src="./js/modal.js"></script>
 <script src="main.js"></script>

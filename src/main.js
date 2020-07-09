@@ -12,24 +12,24 @@ var mySwiper = new Swiper('#case1', {
         // /*  设置每隔3000毫秒切换 */
         delay: 2500,
         // 设置当鼠标移入图片时是否停止轮播
-        disableOnInteraction: false,
+        disableOnInteraction: false
     },
 
     // <!-- 分页器 -->
     pagination: {
         el: '.swiper-pagination',
-        clickable: true,
+        clickable: true
     },
     // <!-- 导航按钮 上一页下一页 -->
     navigation: {
         nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        prevEl: '.swiper-button-prev'
     },
     // <!-- 滚动条 -->
     scrollbar: {
         el: '.swiper-scrollbar',
-        hide: true,
-    },
+        hide: true
+    }
 
 });
 
