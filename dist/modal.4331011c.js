@@ -11203,40 +11203,201 @@ if ( typeof noGlobal === "undefined" ) {
 return jQuery;
 } );
 
-},{"process":"../../../AppData/Roaming/npm/node_modules/parcel/node_modules/process/browser.js"}],"js/cityAgent.js":[function(require,module,exports) {
-"use strict";
+},{"process":"../../../AppData/Roaming/npm/node_modules/parcel/node_modules/process/browser.js"}],"js/modal.js":[function(require,module,exports) {
+var define;
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
-var _jquery = _interopRequireDefault(require("jquery"));
+;
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+(function (root, factory) {
+  'use strict';
 
-//.platform height 响应页面宽度
-var clientWidth = document.documentElement.clientWidth;
+  if ((typeof module === "undefined" ? "undefined" : _typeof(module)) === 'object' && _typeof(module.exports) === 'object') {
+    factory(require('jquery'), root);
+  }
 
-var setPlatformHeight = function setPlatformHeight() {
-  var $platform = (0, _jquery.default)('#platform');
-  var width = $platform.width(); //width => undefined
+  if (typeof define === "function") {
+    if (define.cmd) {
+      define(function (require, exports, module) {
+        var $ = require("jquery");
 
-  console.log(width);
-  var height = Math.floor(width / (2880 / 1180));
-  console.log(height);
-  $platform.css({
-    height: height
-  });
-};
+        factory($, root);
+      });
+    } else {
+      define(["jquery"], function ($) {
+        factory($, root);
+      });
+    }
+  } else {
+    factory(root.jQuery, root);
+  }
+})(typeof window !== "undefined" ? window : this, function ($, root, undefined) {
+  'use strict';
 
-setPlatformHeight();
+  if (!$) {
+    $ = root.jQuery || null;
+  }
 
-var pageResize = function pageResize() {
-  (0, _jquery.default)(window).resize(function () {
-    clientWidth = document.documentElement.clientWidth;
-    setPlatformHeight();
-  });
-};
+  if (!$) {
+    throw new TypeError("必须引入jquery库方可正常使用！");
+  }
 
-pageResize(); //导航栏选中
+  function mModal(options) {
+    options = options || {};
+    this.options = $.extend(true, {}, mModal.defaultOptions, options);
+  }
 
-(0, _jquery.default)('.section>a').on("click", function () {});
+  mModal.defaultOptions = {
+    title: "提示",
+    width: "25%",
+    top: "15vh",
+    content: "正文内容什么",
+    cancelText: "取 消",
+    confirmText: "确 定",
+    showCancelButton: true,
+    showConfirmButton: true,
+    showClose: true,
+    modal: true,
+    customClass: "",
+    confirm: null,
+    cancel: null
+  };
+  mModal.prototype = {
+    constructor: mModal,
+    initElement: function initElement() {
+      var mWrapper = document.createElement("div");
+      mWrapper.className = "m-modal__wrapper";
+      var mContainer = document.createElement("div");
+      mContainer.className = "m-modal__container";
+      mWrapper.appendChild(mContainer);
+      var mHeader = document.createElement("div");
+      mHeader.className = "m-modal__header";
+      var mTitle = document.createElement("span");
+      mTitle.className = "m-modal__title";
+      mHeader.appendChild(mTitle);
+      var mHeaderbtn = document.createElement("button");
+      mHeaderbtn.className = "m-modal__headerbtn";
+      var mClose = document.createElement("i");
+      mClose.className = "m-modal__close iconfont icon-close";
+      mHeaderbtn.appendChild(mClose);
+      mHeader.appendChild(mHeaderbtn);
+      var mBody = document.createElement("div");
+      mBody.className = "m-modal__body";
+      var mBodySpan = document.createElement("div");
+      mBody.appendChild(mBodySpan);
+      var mFooter = document.createElement("div");
+      mFooter.className = "m-modal__footer";
+      var mButtonLeft = document.createElement("button");
+      mButtonLeft.className = "m-modal-button m-modal--primary";
+      var mButtonRight = document.createElement("button");
+      mButtonRight.className = "m-modal-button m-modal--default";
+      var mBtnSpanL = document.createElement("span");
+      var mBtnSpanR = document.createElement("span");
+      mFooter.appendChild(mButtonLeft).appendChild(mBtnSpanL);
+      mFooter.appendChild(mButtonRight).appendChild(mBtnSpanR);
+      mContainer.appendChild(mHeader);
+      mContainer.appendChild(mBody);
+      mContainer.appendChild(mFooter);
+      document.body.appendChild(mWrapper);
+      this.mWrapper = mWrapper;
+      this.mContainer = mContainer;
+      this.mHeader = mHeader;
+      this.mHeaderbtn = mHeaderbtn;
+      this.mBody = mBody;
+      this.mFooter = mFooter;
+      this.mButtonLeft = mButtonLeft;
+      this.mButtonRight = mButtonRight;
+    },
+    renderDom: function renderDom() {
+      var options = this.options;
+      this.initElement();
+
+      if (options.width) {
+        document.querySelector(".m-modal__container").style.width = options.width;
+      }
+
+      if (options.title) {
+        document.querySelector(".m-modal__title").innerHTML = options.title;
+      }
+
+      if (options.top) {
+        document.querySelector(".m-modal__container").style.marginTop = options.top;
+      }
+
+      if (options.content) {
+        document.querySelector(".m-modal__body div").innerHTML = options.content;
+      }
+
+      if (options.showConfirmButton) {
+        if (options.confirmText) {
+          document.querySelector(".m-modal__footer button:first-child span").innerHTML = options.confirmText;
+        }
+      } else {
+        this.mFooter.removeChild(this.mButtonLeft);
+      }
+
+      if (options.showCancelButton) {
+        if (options.cancelText) {
+          document.querySelector(".m-modal__footer button:last-child span").innerHTML = options.cancelText;
+        }
+      } else {
+        this.mFooter.removeChild(this.mButtonRight);
+      }
+
+      if (!options.showClose) {
+        this.mHeader.removeChild(this.mHeaderbtn);
+      }
+
+      if (!options.modal) {
+        document.querySelector(".m-modal__wrapper").style.background = "rgba(0, 0, 0, 0)";
+      }
+
+      if (options.customClass) {
+        document.querySelector(".m-modal__container").classList.add(options.customClass);
+      }
+
+      if (options.showConfirmButton && options.confirm) {
+        this.mButtonLeft.onclick = function () {
+          options.confirm();
+        };
+      }
+
+      if (options.showCancelButton) {
+        this.mButtonRight.onclick = function () {
+          if (options.cancel) {
+            options.cancel();
+            mModal.prototype.close();
+          } else {
+            mModal.prototype.close();
+          }
+        };
+      }
+
+      if (options.showClose) {
+        this.mHeaderbtn.onclick = function () {
+          mModal.prototype.close();
+        };
+      }
+    },
+    show: function show() {
+      document.querySelector(".m-modal__wrapper").style.display = "block";
+    },
+    close: function close() {
+      document.querySelector(".m-modal__wrapper").style.display = "none";
+      var timer = null;
+      timer = setTimeout(function () {
+        clearTimeout(timer);
+        mModal.prototype.destroy();
+      }, 200);
+    },
+    destroy: function destroy() {
+      var mWrapper = document.querySelector(".m-modal__wrapper");
+      var parentWrapper = mWrapper.parentNode;
+      parentWrapper.removeChild(mWrapper);
+    }
+  };
+  window.mModal = mModal;
+});
 },{"jquery":"../node_modules/jquery/dist/jquery.js"}],"../../../AppData/Roaming/npm/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -11441,5 +11602,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../../AppData/Roaming/npm/node_modules/parcel/src/builtins/hmr-runtime.js","js/cityAgent.js"], null)
-//# sourceMappingURL=/cityAgent.8967c039.js.map
+},{}]},{},["../../../AppData/Roaming/npm/node_modules/parcel/src/builtins/hmr-runtime.js","js/modal.js"], null)
+//# sourceMappingURL=/modal.4331011c.js.map

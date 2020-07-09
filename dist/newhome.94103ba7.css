@@ -5285,7 +5285,7 @@ body {
     z-index: 999;
     top: 18px;
     left: 18px;
-    background: url(/delicacy.4085237d.png);
+    background: url(/app1.292461ac.png);
     background-size: 100%;
 }
 
@@ -5302,13 +5302,13 @@ body {
 */
 
 .text-part-picked .down {
-    color: #FFBA1E !important;
+    color: rgb(202,18,53) !important;
     opacity: 1 !important;
 }
 
 .text-part-picked .down:before {
-    color: #FFBA1E !important;
-    background: #FFBA1E !important;
+    color: rgb(202,18,53) !important;
+    background: rgb(202,18,53) !important;
     opacity: 1 !important;
 }
 
