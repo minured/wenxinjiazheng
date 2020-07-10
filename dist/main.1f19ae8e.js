@@ -9425,19 +9425,19 @@ var storylist = [{
   title1: '“馨”家政人才市场',
   title2: '把兼职变成就业，收入更稳定',
   para: '家政单一直不稳定？拥有家政保洁丰富经验和技能，偶尔有单做和每天有单做收入差距很大，许多人想靠做家政存钱却一直像打零工。“馨”家政人才市场聚焦家政服务市场精准需求，为家政服务人才建成一站式就业服务平台！从寻找客户到匹配客户，从工作过程记录到争议协调，从线上初步沟通到签订电子合同，为所有就业者提供就业过程中全方位指导服务，帮助解决就业所遇难题，助力稳定收入。',
-  address: '/story?next_step=/newhome/story/1'
+  address: ''
 }, {
   img: './story2.jpg',
   title1: '“馨”家政 明星月嫂：李明芳',
   title2: '强大的理论要靠丰富的经验支撑',
   para: '李阿姨今年45岁，来自浙江湖州市，她接受过专业的月嫂培训，现已有六年月嫂经验，从业以来已经为二十多个家庭的妈妈提供了丰富而科学的护理知识和经验，为新生儿宝宝提供了全面细致的喂养和呵护。有一次护理一个新生宝宝的过程中，李阿姨凭借丰富的经验判断宝宝有新生儿黄疸的早期症状，经过医院及时医治，宝宝很快恢复了健康。',
-  address: '/story?next_step=/newhome/story/2'
+  address: ''
 }, {
   img: './story3.jpg',
   title1: '“馨”家政 明星保姆：刘翠',
   title2: '把客户当家人才是真用心',
   para: '“李爷爷和他家人的感谢我觉得都是我应该做的，我自己也有家人，我也希望家人得到好的照顾和关心。”华东地区明星保姆刘翠照顾常州的李爷爷已经三年了，客户家人常在国外，刘大姐知道爷爷患有糖尿病后主动学习糖尿病知识，在李爷爷的日常饮食中严格控制糖分的摄入，用更健康的烹饪方式为李爷爷准备三餐，并协助李爷爷日常监测血糖和服药。',
-  address: '/story?next_step=/newhome/story/3'
+  address: ''
 }];
 var _default = {
   storylist: storylist
@@ -9450,11 +9450,6 @@ var _storyList = _interopRequireDefault(require("./story-list"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-/*
- * 优秀合作案例轮播
- *
- */
-// require(['./jquery', './easing', './story-list'], function ($, easing, storylistFile) {
 var $ = require('./jquery.js');
 
 var easing = require('./easing.js');
@@ -21634,24 +21629,24 @@ var mySwiper = new Swiper('#case1', {
   //默认显示第二张图片索引从0开始
   speed: 2000,
   //设置过度时间
-  // /* grabCursor: true,//鼠标样式根据浏览器不同而定 */
+  //鼠标样式根据浏览器不同而定
   autoplay: {
-    // /*  设置每隔3000毫秒切换 */
+    //设置每隔3000毫秒切换
     delay: 2500,
     // 设置当鼠标移入图片时是否停止轮播
     disableOnInteraction: false
   },
-  // <!-- 分页器 -->
+  //分页器
   pagination: {
     el: '.swiper-pagination',
     clickable: true
   },
-  // <!-- 导航按钮 上一页下一页 -->
+  //导航按钮 上一页下一页
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev'
   },
-  // <!-- 滚动条 -->
+  //滚动条
   scrollbar: {
     el: '.swiper-scrollbar',
     hide: true
@@ -21858,8 +21853,7 @@ addEvent(); //服务介绍 鼠标移入效果
 
 $(".classified").find('li').mouseenter(function () {
   $(this).addClass('text-part-picked');
-});
-$('.classified').find('li').mouseleave(function () {
+}).mouseleave(function () {
   $(this).removeClass('text-part-picked');
 });
 },{"./js/carousel1":"js/carousel1.js","./js/carousel2":"js/carousel2.js","./js/sidebar":"js/sidebar.js","./js/easing":"js/easing.js"}],"../../../AppData/Roaming/npm/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
@@ -21890,7 +21884,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62689" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51019" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

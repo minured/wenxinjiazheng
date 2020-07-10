@@ -7,30 +7,28 @@ import './js/easing'
 var mySwiper = new Swiper('#case1', {
     initialSlide: 0, //默认显示第二张图片索引从0开始
     speed: 2000, //设置过度时间
-    // /* grabCursor: true,//鼠标样式根据浏览器不同而定 */
+    //鼠标样式根据浏览器不同而定
     autoplay: {
-        // /*  设置每隔3000毫秒切换 */
+        //设置每隔3000毫秒切换
         delay: 2500,
         // 设置当鼠标移入图片时是否停止轮播
         disableOnInteraction: false
     },
-
-    // <!-- 分页器 -->
+    //分页器
     pagination: {
         el: '.swiper-pagination',
         clickable: true
     },
-    // <!-- 导航按钮 上一页下一页 -->
+    //导航按钮 上一页下一页
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev'
     },
-    // <!-- 滚动条 -->
+    //滚动条
     scrollbar: {
         el: '.swiper-scrollbar',
         hide: true
     }
-
 });
 
 // 首页滚动动画
@@ -65,12 +63,10 @@ var animation = function() {
             });
         } else {
             $('.title-3').css({
-
                 "opacity": 0,
                 "top": 250 + 'px'
             });
         }
-
         var cssShowObj = {
             "top": 50 + 'px',
             "opacity": 1,
@@ -81,7 +77,6 @@ var animation = function() {
             "opacity": 0,
             "transition": "all 0.2s"
         };
-
         // 三大部分(服务介绍\合作案例\新闻报道)
         if (pagePosition > 1250) {
             $('.text-title').css({ "opacity": 1, "top": 380 + 'px' });
@@ -107,7 +102,6 @@ var animation = function() {
             $('.fresh').css(cssHideObj);
             $('.supermarket').css(cssHideObj);
         }
-
         // 优秀合作案例
         if (pagePosition > 2000) {
             $('.title-4').css({
@@ -120,7 +114,6 @@ var animation = function() {
                 "top": 140 + 'px'
             });
         }
-
         if (pagePosition > 2200) {
             $('.half-background').css({
                 "opacity": 1,
@@ -136,22 +129,17 @@ var animation = function() {
                 "top": 100 + 'px'
             });
         }
-
         if (pagePosition > 2200){
              $(".story-slider-container").css({
                 "opacity": 1,
                 "top": 30 + 'px'
              });
-
         } else {
             $(".story-slider-container").css({
                 "opacity": 0,
                 "top": 80 + 'px'
              });
         }
-
-
-
         // 媒体新闻报道
         if (pagePosition > 2900){
             $('.title-5').css({
@@ -228,8 +216,7 @@ addEvent();
 //服务介绍 鼠标移入效果
 $(".classified").find('li').mouseenter(function(){
     $(this).addClass('text-part-picked')
-})
-$('.classified').find('li').mouseleave(function(){
+}).mouseleave(function(){
     $(this).removeClass('text-part-picked')
 })
 

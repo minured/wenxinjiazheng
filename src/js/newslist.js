@@ -6,7 +6,6 @@ new Vue({
       typeList: undefined,
       newList: undefined,
       startCount: 0
-
     }
   },
   methods:{
@@ -15,10 +14,11 @@ new Vue({
       console.log(window.location)
     },
     loadMore(e){
+      console.log('minu')
       let url_news = `http://api.wxjz.719471.net/mobile/article/article/list?CK=735468c0b41aa74edc66d8e5d82b53ce&category_id=2&pageStartCount=${10}&pageSize=10&is_show=1`
 
       $.get(url_news, response => {
-        let response_news = response.data.data.list
+        let response_news = response.data.list
         if (response_news.length > 0) {
           this.newList.push(response.data.list)
         } else {

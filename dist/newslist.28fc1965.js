@@ -144,9 +144,10 @@ new Vue({
     loadMore: function loadMore(e) {
       var _this = this;
 
+      console.log('minu');
       var url_news = "http://api.wxjz.719471.net/mobile/article/article/list?CK=735468c0b41aa74edc66d8e5d82b53ce&category_id=2&pageStartCount=".concat(10, "&pageSize=10&is_show=1");
       $.get(url_news, function (response) {
-        var response_news = response.data.data.list;
+        var response_news = response.data.list;
 
         if (response_news.length > 0) {
           _this.newList.push(response.data.list);
@@ -208,7 +209,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62689" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51019" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
