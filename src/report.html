@@ -5,7 +5,11 @@
   <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>新闻详情--温馨家政</title>
+  <link
+    rel="shortcut icon"
+    href="./static/img/logoIcon.png"
+  />
+  <title>诚信举报--温馨家政</title>
   <style>
     .back-to-list {
       text-decoration: none;
@@ -44,13 +48,17 @@
       line-height: 25px;
       margin-bottom: 20px;
     }
+    .news-content article * {
+      margin-bottom: 20px;
+    }
+
+    .news-content article .report-content {
+      text-indent: 2em;
+
+    }
 
   </style>
-  <link rel="stylesheet" href="./newsContent.css">
-  <link
-    rel="shortcut icon"
-    href="./static/img/logoIcon.png"
-  />
+  <link rel="stylesheet" href="./style/newsContent.css">
 </head>
 <body>
 
@@ -68,7 +76,7 @@
         <li data-index="0"><a href="./index.html">首页</a></li>
         <li data-index="1"><a href="./joinin.html">入驻加盟</a></li>
         <li data-index="2"><a href="./platform.html">开放平台</a></li>
-        <li data-index="3" class="active"><a href="./newslist.html">新闻报道</a></li>
+        <li data-index="3"><a href="./newslist.html">新闻报道</a></li>
         <li data-index="4" style="display: none;"><a href="#">下载手机版</a></li>
       </ul>
     </div>
@@ -76,9 +84,23 @@
 </div>
 
 <section class="news">
-  <a href="./newslist.html" class="back-to-list"> 返回列表 </a>
-  <h2 class="news-title"></h2>
-  <div class="news-content"></div>
+  <div class="news-content">
+    <article>
+      <h3 class="report-content">
+        不管是在炎炎夏日还是寒冷冬季，小馨都一直致力于让您的家或者公司都能享受到安心省心的家政服务。为了更好地规范平台秩序、促进家政服务人员从业公平，我们开放了消费者、家政服务人员投诉通道。
+      </h3>
+      <h2>
+        如果您在使用时发现以下任何一种情况，请及时填写页面下方的信息来联系我们：
+      </h2>
+      <p>1、为您提供服务的商户、家政服务人员与平台匹配人员不符；</p>
+      <p>2、商户与家政人员联合对您的权益造成侵害；</p>
+      <p>3、家政服务人员的服务内容与订单中承诺的服务内容不符；</p>
+      <p>4、其他您认为影响了市场秩序公正的行为。</p>
+
+      <h1>如您需要投诉家政服务人员或对我们有更好的建议，请直接致电客服 <a href="tel:020-89662075">020-89662075</a></h1>
+
+    </article>
+  </div>
 </section>
 
 

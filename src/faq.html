@@ -5,7 +5,11 @@
   <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>新闻详情--温馨家政</title>
+  <link
+    rel="shortcut icon"
+    href="./static/img/logoIcon.png"
+  />
+  <title>常见问题--温馨家政</title>
   <style>
     .back-to-list {
       text-decoration: none;
@@ -44,13 +48,16 @@
       line-height: 25px;
       margin-bottom: 20px;
     }
+    .news-content article h1 {
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+    .news-content article h3 {
+      margin-top: 10px;
+    }
 
   </style>
-  <link rel="stylesheet" href="./newsContent.css">
-  <link
-    rel="shortcut icon"
-    href="./static/img/logoIcon.png"
-  />
+  <link rel="stylesheet" href="./style/newsContent.css">
 </head>
 <body>
 
@@ -68,7 +75,7 @@
         <li data-index="0"><a href="./index.html">首页</a></li>
         <li data-index="1"><a href="./joinin.html">入驻加盟</a></li>
         <li data-index="2"><a href="./platform.html">开放平台</a></li>
-        <li data-index="3" class="active"><a href="./newslist.html">新闻报道</a></li>
+        <li data-index="3"><a href="./newslist.html">新闻报道</a></li>
         <li data-index="4" style="display: none;"><a href="#">下载手机版</a></li>
       </ul>
     </div>
@@ -76,9 +83,36 @@
 </div>
 
 <section class="news">
-  <a href="./newslist.html" class="back-to-list"> 返回列表 </a>
-  <h2 class="news-title"></h2>
-  <div class="news-content"></div>
+  <div class="news-content">
+    <article>
+      <h1>在线支付问题：</h1>
+      <h3 class="">Q：在线支付取消订单后钱怎么返还？</h3>
+      <p>订单取消后，款项会在两个工作日内，直接返还到您的账户余额。</p>
+
+      <h3 class="">Q：怎么查看退款是否成功？</h3>
+      <p>退款会在三个工作日之内到账户余额，可在“账号管理——我的账号”中查看是否到账。</p>
+
+      <h3 class="">Q：账户里的余额怎么提现？</h3>
+      <p>余额可到“我的主页→账户余额”里提取到您的银行卡，另外，余额也可直接用于支付家政服务订单。</p>
+
+      <h3 class="">Q：余额提现到账时间是多久？</h3>
+      <p>1-7个工作日内可退回您的支付账户。由于银行处理可能有延迟，具体以账户的到账时间为准。</p>
+
+      <h3 class="">Q：在线支付的过程中，订单显示未支付成功，款项却被扣了，怎么办？</h3>
+      <p>出现此问题，可能是银行/支付宝的数据没有即时传输至馨家政，请您不要担心，稍后刷新页面查看。 如半小时后仍显示"未付款"，请先联系银行/支付宝客服，获取您扣款的交易号，然后致电客服020-89662075，我们会协助您解决。</p>
+
+      <h1>其他问题：</h1>
+      <h3 class="">Q：如果对商家服务不满意如何进行投诉？</h3>
+      <p>您可以在该订单完成评价后点击订单详情页中的意见反馈向客服投诉，或者拨打馨家政的客服电话（020-89662075）向客服进行投诉。</p>
+
+      <h3 class="">Q：我用的是手机客户端，为什么无法定位？</h3>
+      <p>请先检查手机的网络以及是否开启定位功能。若确认正常，请试着在户外或wifi环境下进行定位。</p>
+
+      <h3 class="">Q：为什么有时需要输入短信验证码？</h3>
+      <p>为了保障您的账号安全及商家利益，对于新用户及一些有异常行为的下单系统会提示您输入短信验证码。如果迟迟未接收到短信验证码，您同样可以选择接听语音验证码。</p>
+
+    </article>
+  </div>
 </section>
 
 
