@@ -456,44 +456,44 @@ body {
 }
 
 .part-3 .text-part .classified .delicacy .img1 {
-    background: url(../static/img/Delicacy-nopick.png);
+    background: url(../static/img/baojie-nopick.png);
     background-size: 100%;
 }
 
 .part-3 .text-part .classified .desserts .img2 {
-    background: url(../static/img/Desserts-nopick.png);
+    background: url(../static/img/baomu-nopick.png);
     background-size: 100%;
 }
 
 .part-3 .text-part .classified .fresh .img3 {
-    background: url(../static/img/fruit-nopick.png);
+    background: url(../static/img/weixiu-nopick.png);
     background-size: 100%;
 }
 
 .part-3 .text-part .classified .supermarket .img4 {
-    background: url(../static/img/Supermarket-nopick.png);
+    background: url(../static/img/dingzhi-nopick.png);
     background-size: 100%;
 }
 
 
 /* picked */
 .part-3 .text-part .classified .text-part-picked .img1 {
-    background: url(../static/img/Delicacy-picked.png);
+    background: url(../static/img/baojie-picked.png);
     background-size: 100%;
 }
 
 .part-3 .text-part .classified .text-part-picked .img2 {
-    background: url(../static/img/Desserts-picked.png);
+    background: url(../static/img/baomu-picked.png);
     background-size: 100%;
 }
 
 .part-3 .text-part .classified .text-part-picked .img3 {
-    background: url(../static/img/fruit-picked.png);
+    background: url(../static/img/weixiu-picked.png);
     background-size: 100%;
 }
 
 .part-3 .text-part .classified .text-part-picked .img4 {
-    background: url(../static/img/Supermarket-picked.png);
+    background: url(../static/img/dingzhi-picked.png);
     background-size: 100%;
 }
 
