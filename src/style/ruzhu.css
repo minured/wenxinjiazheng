@@ -533,7 +533,7 @@ body, html {
 }
 
 .welcome-container .content .adv-1 .adv-1-title {
-  background-image: url("https://s3plus.meituan.net/v1/mss_6b7c26b3db4c4bbebdbb4d7a9bb76633/static-pc/welcome/adv-1-n.jpg")
+  background-image: url("../static/img/adv1-title.jpg")
 }
 
 .welcome-container .content .adv-1 .adv-1-pic {
@@ -545,7 +545,7 @@ body, html {
 }
 
 .welcome-container .content .adv-2 .adv-2-title {
-  background-image: url("https://s3plus.meituan.net/v1/mss_6b7c26b3db4c4bbebdbb4d7a9bb76633/static-pc/welcome/adv-2-n.jpg")
+  background-image: url("../static/img/adv2-title.jpg")
 }
 
 .welcome-container .content .adv-2 .adv-2-pic {
@@ -554,7 +554,7 @@ body, html {
   margin: 0 auto;
   margin-top: 50px;
   background-size: 100% 100%;
-  background-image: url("../static/img/advantage2.jpg")
+  background-image: url("../static/img/lvUp.jpg")
 }
 
 .welcome-container .content .adv-3 .adv-3-title {
