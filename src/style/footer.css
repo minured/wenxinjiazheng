@@ -194,8 +194,12 @@
     width: 18px;
     height: 18px;
     margin-left: 20px;
-    background: url(//s3plus.meituan.net/v1/mss_e602b0ee72a245fd9997b7276211d882/waimai-web/goverment_cut.png) no-repeat;
+    /*background: url() no-repeat;*/
     background-size: 100%;
+}
+
+.footer-content .bottom a {
+    color: #999;
 }
 
 .footer-content .bottom .qualification-text{

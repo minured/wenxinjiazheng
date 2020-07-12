@@ -1,17 +1,15 @@
-/* 顶部代码 */
-
-/* 重要: 由于历史遗留原因，需要手动添加版本号, 请全局搜索版本号并替换 */
-/* @import url("../global.css?v=1.09"); */
 @import url("./global.css");
-/* @import url("./top.css?v=1.09"); */
-/* @import url("./sort_sprite.css?v=1.09"); */
-/* @import url("../module/ceiling.css?v=1.09"); */
 @import url("./ceiling.css");
 
 body {
     background-color: #fff !important;
     /* 苹果字体: https://blog.csdn.net/qq_16494241/article/details/53256621 */
     font-family:  PingFangSC-Light, Microsoft Yahei,Arial,Helvetica,sans-serif !important;
+}
+
+/*用户反馈*/
+.user-feedback {
+    cursor: pointer;
 }
 
 /* 由于header.inc里面最外层是page-warp, 现reset其CSS */
@@ -48,11 +46,17 @@ body {
 
 .part-1 .headpic {
     width: 100%;
-    height: 400px;
+    height: 700px;
     overflow: hidden;
     /*background: url('../static/img/banner.jpg') no-repeat;*/
-    /* background: url('https://p1.meituan.net/1440.590/codeman/d2ab674fa0e4c875865e524d82fe15a34372569.png') no-repeat; */
     background-size: cover;
+}
+
+/*轮播图片*/
+/*第二张图宽度被重写 important一下*/
+.part-1 .headpic img {
+    width: 100% !important;
+    height: 100% !important;
 }
 
 
@@ -1091,6 +1095,3 @@ body {
     /*background: url(/static/img/new2018/yellow-arrow.png) no-repeat;*/
     background-size: 100%;
 }
-
-
-/*去除 新闻报道轮播 标题 滚动条*/

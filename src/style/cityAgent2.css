@@ -34,6 +34,7 @@ body, html {
   z-index: 99999999;
 }
 .new-header-fixed {
+  /*border: 1px solid red;*/
   position: fixed;
   top: 0;
   left: 0;
@@ -46,8 +47,9 @@ body, html {
 .new-header-fixed img {
   /*border: 1px solid red;*/
   position: relative;
-  padding: 0 1% 0 10%;
+  margin: 0 1% 0 10%;
   height: 40px;
+  /*cursor: pointer;*/
   /*width: 40px;*/
   top: 15px;
 }

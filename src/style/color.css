@@ -1,13 +1,3 @@
-/**
- * 页面上主要基调的颜色 ，最大程度上的消除冗余代码，实现代码的重用。
- * 目前有三种命名空间：
- * color-common(cc) —— 通用颜色分类，比如说背景色，按钮颜色等等，颜色过于混杂的情况下，则不必细分，列出大致主色调即可。
- * color-alink(ca)  —— a标签链接颜色。
- * color-text(ct)   —— 用于表示文字的颜色。
- * 
- * @author XU Kai(xukai@meituan.com)
- * @date 2014.01.06
- */
 
 .cc-yellow{
   color: #FF6900;

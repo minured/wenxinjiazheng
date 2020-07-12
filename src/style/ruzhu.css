@@ -1,7 +1,12 @@
+h1.logo {
+  cursor: pointer;
+}
+
 body, html {
   width: 100%;
   height: 100%
 }
+
 
 * {
   margin: 0;
@@ -799,6 +804,7 @@ body, html {
 
 .welcome-container .header-b-pic {
   width: 100%;
+  height: 600px;
   position: relative;
   background-color: #ccc;
   background-repeat: no-repeat;
@@ -868,75 +874,11 @@ body, html {
 }
 
 .foot .title {
+  margin-bottom: 10px;
   font-size: 32px;
   color: #fff
 }
 
-.foot .f-open-store {
-  background: #ffd161;
-  border-radius: 2px;
-  margin-top: 30px;
-  width: 148px;
-  line-height: 48px;
-  text-align: center;
-  font-size: 22px;
-  color: #333;
-  text-decoration: none;
-  cursor: pointer
-}
-
-.foot .waimai-logo {
-  position: absolute;
-  right: 268px;
-  top: 141px;
-  border-radius: 4px;
-  width: 101px;
-  height: 62px;
-  overflow: hidden
-}
-
-.video-wrapper {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, .8);
-  z-index: 999
-}
-
-.video-wrapper video {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  outline: none
-}
-
-.video-wrapper .close-video {
-  position: absolute;
-  top: 50px;
-  right: 50px;
-  font-size: 28px;
-  color: #fff;
-  cursor: pointer
-}
-
-.video-wrapper .close-video span {
-  display: inline-block;
-  width: 40px;
-  height: 40px;
-  background: url("https://s3plus.meituan.net/v1/mss_6b7c26b3db4c4bbebdbb4d7a9bb76633/images/common/close.png");
-  background-size: contain;
-  vertical-align: bottom
-}
-
-.video-wrapper-show {
-  display: block
-}
 
 .cy-text {
   color: #fff;
@@ -1033,5 +975,3 @@ body, html {
   height: 12px;
   display: inline-block
 }
-
-/*# sourceMappingURL=welcome.73d0b4f6.css.map*/

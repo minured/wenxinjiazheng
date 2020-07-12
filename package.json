@@ -17,5 +17,11 @@
     "@vue/component-compiler-utils": "^3.1.2",
     "cssnano": "^4.1.10",
     "vue-template-compiler": "^2.6.11"
-  }
+  },
+  "name": "wenxin2",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "http://dev.719471.net:6880/wxjzys/wxjz-website.git",
+  "author": "minured <minured@qq.com>",
+  "license": "MIT"
 }

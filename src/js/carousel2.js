@@ -1,15 +1,9 @@
-/*
- * 媒体新闻报道轮播
- *
- */
-
+// 媒体新闻报道轮播
 
 import $ from './jquery'
 import easing from './easing'
 
 import $clamp from 'clamp'
-
-import response from 'vue-resource/src/http/response'
 
 
 let newsListResponse
@@ -21,13 +15,13 @@ let newsListUrl = 'http://api.wxjz.719471.net/mobile/article/article/list?CK=735
 
 function getNewsList() {
   $.ajax({
-    type: "GET",
+    type: 'GET',
     url: newsListUrl,
     success: (response) => {
       newsListResponse = response.data.list.slice(0, 6)
       newsListResponse.forEach((item, i) => {
         newsListData.push({
-          img: `./news${i+1}.jpg`,
+          img: `./news${i + 1}.jpg`,
           title: item.title,
           para: item.preview_content,
           address: './newsContent.html?id=' + item.id,
@@ -234,7 +228,7 @@ function getNewsList() {
       addEvent()
 
       return newsListData
-    },
+    }
 
 
   })

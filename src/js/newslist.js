@@ -1,20 +1,22 @@
 import dayjs from 'dayjs'
+import Vue from "vue/dist/vue.esm.js" //完整版
+import './dialog'
 
 new Vue({
   data() {
     return {
-      typeList: undefined,
-      newList: undefined,
+      typeList: {title: "加载中..."},
+      newList: [{title: "加载中..."}],
       startCount: 0
     }
   },
+
   methods:{
     openNewsContent(id){
       window.open(`./newsContent.html?id=${id}`, '_self')
       console.log(window.location)
     },
     loadMore(e){
-      console.log('minu')
       let url_news = `http://api.wxjz.719471.net/mobile/article/article/list?CK=735468c0b41aa74edc66d8e5d82b53ce&category_id=2&pageStartCount=${10}&pageSize=10&is_show=1`
 
       $.get(url_news, response => {
@@ -49,10 +51,21 @@ new Vue({
 
       this.startCount += 10
     })
+
+    //用户反馈
+    console.log($('.user-feedback'))
+    $('.user-feedback').on("click", function(){
+      console.log('hi')
+      $.dialog({
+        contentHtml : '<p style="text-align: center">请联系客服：<a href="tel:020-89662075">020-89662075</a></p>'
+      });
+    });
   },
 
+}).$mount('.m-newslist')
 
-}).$mount('#root')
+
+
 
 
 

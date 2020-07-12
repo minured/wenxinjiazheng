@@ -1,3 +1,7 @@
+/*脚步 网址*/
+.footer-content .bottom a {
+  color: #999;
+}
 html {
   background-color: #fff
 }
@@ -70,11 +74,12 @@ body {
 }
 
 .news-list-component .list .news {
+  /*border: 1px solid red;*/
   position: relative;
   padding: 30px 0;
   display: -ms-flexbox;
   display: flex;
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 5px solid #666;
   cursor: pointer;
 }
 
@@ -88,10 +93,11 @@ body {
 
 .news-list-component .list .news .para {
   /*border: 1px solid red;*/
-  text-indent: 28;
+
   overflow: hidden;
   text-overflow: ellipsis;
   margin-bottom: 20px;
+  margin-top: 10px;
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;

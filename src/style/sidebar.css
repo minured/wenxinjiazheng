@@ -8,14 +8,18 @@
 }
 
 .sidebar {
-    width: 124px;
-    height: 257px;
+    width: 90px;
+    height: 60px;
+
+    /*放二维码的高度和宽度*/
+    /*height: 257px;*/
+    /*width: 124px;*/
     background: #fff;
-    box-shadow: 0 1px 8px 0 rgba(0,0,0,0.06);
+    box-shadow: 0 1px 8px 0 rgba(0,0,0,0.3);
     box-sizing: border-box;
     padding-top: 14px;
-    border-top-left-radius: 4px;
-    border-bottom-left-radius: 4px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
 }
 
 .sidebar .top {
@@ -49,18 +53,6 @@
 .sidebar .top:hover p {
     color: #FFB40A;
 }
-
-
-/*
-.sidebar .top:hover .sidebar .top i {
-    background: url(/static/img/new2018/go-top-hover.png) no-repeat;
-    background-size: 100% 100%;
-}
-
-.sidebar .top:hover  .sidebar .top p {
-    color: #FFB40A;
-}
-*/
 
 .sidebar .wm,
 .sidebar .wx {

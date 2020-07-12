@@ -13,6 +13,7 @@
 
 
   <link href="./style/newslist.css" rel="stylesheet">
+  <link rel="stylesheet" href="./style/dialog.css">
 </head>
 <body>
 
@@ -20,20 +21,16 @@
   <div class="root">
     <div class="csr-header">
       <div class="header-content">
-        <div id="left">
+        <a id="left" href="./index.html">
           <div class="logo-pic"></div>
-          <div class="waimai">
-            <div class="waimai-title"></div>
-            <div class="waimai-slogan"></div>
-          </div>
-        </div>
+        </a>
         <div id="right">
           <ul id="links">
             <li data-index="0"><a href="./index.html">首页</a></li>
             <li data-index="1"><a href="./joinin.html">入驻加盟</a></li>
             <li data-index="2"><a href="./platform.html">开放平台</a></li>
             <li data-index="3" class="active"><a href="./newslist.html">新闻报道</a></li>
-            <li data-index="4" v-if="false"><a href="#">下载手机版</a></li>
+<!--            <li data-index="4" v-if="false"><a href="#">下载手机版</a></li>-->
           </ul>
         </div>
       </div>
@@ -44,13 +41,13 @@
           <div class="news-icon"></div>
           <div class="news">新闻</div>
 
-          <ul class="classify">
+          <ul class="classify" v-cloak>
             <li class="active-li" data-index="index">全部</li>
             <li class="" data-index="index">{{typeList.title}}</li>
           </ul>
         </div>
         <div class="list">
-          <ul v-for="(news, i) in newList" :key="i">
+          <ul v-for="(news, i) in newList" :key="i" v-cloak>
 <!--            <a :href="`./newsContent.html?id=`${news.id}">-->
               <li class="news"  @click="openNewsContent(news.id)">
                 <div class="content">
@@ -76,68 +73,58 @@
           <div class="top">
             <div class="left">
               <ul class="col1">
-                <!-- TODO 地址 -->
-                <li><a target="_blank" href="./platform.html">开放平台</a></li>
-                <li><a target="_blank" href="./newslist.html">媒体报道</a></li>
-                <li><a target="_blank" href="./qualification.html">资质规则</a></li>
-                <li><a target="_blank" href="./joinin.html">入驻加盟</a></li>
+                <li>
+                  <a target="_blank" href="./platform.html">开放平台</a>
+                </li>
+                <li>
+                  <a target="_blank" href="./newslist.html">媒体报道</a>
+                </li>
+                <li>
+                  <a target="_blank" href="./qualification.html">资质规则</a>
+                </li>
+                <li>
+                  <a target="_blank" href="./joinin.html">入驻加盟</a>
+                </li>
               </ul>
               <ul class="col2">
                 <li><a target="_blank" href="./faq.html">常见问题</a></li>
-                <li><a target="" href="javascript:window.alert('请拨打客服热线:020-89662075')">用户反馈</a></li>
-                <li><a target="_blank" href="#">诚信举报</a></li>
+                <li class="user-feedback">用户反馈</li>
+                <li><a target="_blank" href="./report.html">诚信举报</a></li>
                 <li><a target="_blank" href="./joinin.html">加入我们</a></li>
               </ul>
             </div>
             <div class="middle">
               <div class="cooperation">
                 <div class="title">品牌合作</div>
-                <div class="content">gzwxjz@126.com</div>
+                <div class="content"><a href="mailto:gzwxjz@126.com">gzwxjz@126.com</a></div>
               </div>
               <div class="client-service">
                 <div class="title">客服</div>
-                <div class="content">电话: 020-89662075
+                <div class="content">电话: <a href="tel:020-89662075">020-89662075</a>
                   <br>
-                  周一至周日 9:00~23:00
+                  周一至周五 9:00~20:00
                   <br>
                   客服不受理商务合作
                 </div>
               </div>
             </div>
-
-            <div class="right" style="display: none;">
+            <div class="right" style="display: none">
               <div class="right-title">更多商家，更多优惠</div>
               <div class="QR-code">
                 <div class="QR-code1"></div>
                 <div class="QR-code2"></div>
               </div>
             </div>
-
           </div>
           <div class="bottom">
-            <!--          <div class="qualification-img"></div>-->
-            <!--          <a class="police qualification-text"-->
-            <!--             href="./"-->
-            <!--             target="_blank">北京三快在线科技有限公司</a>-->
-            <span class="copyright">©️ gzwxjz.cn 温馨家政月嫂（广州）科技有限公司</span>
-
-            <!--          <div class="img"></div>-->
-            <!--          <span class="police">京公网安备11010502025545号</span>-->
+            <span class="copyright"><a href="http://gzwxjz.cn">©️ gzwxjz.cn &nbsp; 温馨家政月嫂（广州）科技有限公司</a></span>
           </div>
         </div>
       </div>
     </div>
   </div>
 </div>
-<script src="https://s3plus.meituan.net/v1/mss_e602b0ee72a245fd9997b7276211d882/waimai-pc/js/lib/jquery.min.js"></script>
-<script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.0/vue.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="./js/newslist.js"></script>
-
-<!--<script type="text/javascript"-->
-<!--        src="//s3plus.meituan.net/v1/mss_4067b040e3364072a20737a5254654ea/waimai-cfe-custom-pc-08ddc77d/production/js/runtime.48b9b964aeb2bb6e38c1.js"></script>-->
-<!--<script type="text/javascript"-->
-<!--        src="//s3plus.meituan.net/v1/mss_4067b040e3364072a20737a5254654ea/waimai-cfe-custom-pc-08ddc77d/production/js/vendor.bdf01714757a16b9359d.js"></script>-->
-<!--<script type="text/javascript"-->
-<!--        src="//s3plus.meituan.net/v1/mss_4067b040e3364072a20737a5254654ea/waimai-cfe-custom-pc-08ddc77d/production/js/newslist.832dc67eb624de0663a3.js"></script>-->
 </body>
 </html>
