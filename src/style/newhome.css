@@ -513,7 +513,7 @@ body {
 .iphone-part .iphone-out {
     width: 100%;
     height: 100%;
-    background: url('https://s3plus.sankuai.com/v1/mss_c4375b35f5cb4e678b5b55a48c40cf9d/waimai-c-iweb/%E6%89%8B%E6%9C%BA%E5%A4%96%E5%A3%B32%402x.png');
+    background: url('../static/img/iphone-out.png');
     background-size: 100%;
     position: relative;
 }
@@ -559,7 +559,9 @@ body {
 /* ------------------------------------------------part-4部分 */
 .part-4-container {
     width: 100%;
-    background-image: linear-gradient(-135deg, #FFD161 0%, #FFBD27 100%);
+    /*background-image: linear-gradient(-135deg, #FFD161 0%, #FFBD27 100%);*/
+    background-image: url("../static/img/part-4-bg.png");
+
 }
 
 .part-4 {
