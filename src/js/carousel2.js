@@ -1,7 +1,7 @@
 // 媒体新闻报道轮播
 
 import $ from './jquery'
-import easing from './easing'
+// import easing from './easing'
 
 import $clamp from 'clamp'
 
@@ -11,8 +11,9 @@ let newsListData = []
 let newsListUrl = 'http://api.wxjz.719471.net/mobile/article/article/list?CK=735468c0b41aa74edc66d8e5d82b53ce&category_id=2&pageStartCount=0&pageSize=10&is_show=1'
 
 
-//获取数据=>轮播
+let resultIsGot = false
 
+//获取数据=>轮播
 function getNewsList() {
   $.ajax({
     type: 'GET',
@@ -20,13 +21,17 @@ function getNewsList() {
     success: (response) => {
       newsListResponse = response.data.list.slice(0, 6)
       newsListResponse.forEach((item, i) => {
+
         newsListData.push({
+          //TODO 从结果获取图片
           img: `./news${i + 1}.jpg`,
+
           title: item.title,
           para: item.preview_content,
           address: './newsContent.html?id=' + item.id,
           time: item.create_time
         })
+
       })
 
 
@@ -135,14 +140,7 @@ function getNewsList() {
         // handle currentIndex
         currentIndex.html('0' + index)
 
-        /* handle news list
-        rightNewsList
-            .find('li')
-            .eq(index - 1)
-            .addClass('hover')
-            .siblings()
-            .removeClass('hover');
-        */
+
 
         // handle colors
         navigationButtons
@@ -234,6 +232,9 @@ function getNewsList() {
   })
 
 }
+
+
+
 
 getNewsList()
 

@@ -1,5 +1,22 @@
 import $ from 'jquery'
 
+//点击添加类
+console.log($('span.section>a'))
+
+$("span.section>a").on("click", function(e) {
+  let el = e.target
+  $("span.section>a").removeClass("selected")
+  console.log(el)
+  //platform process rules
+  if (el.href.split("#")[1] === "platform"){
+    $(el).addClass("selected")
+  } else if (el.href.split("#")[1] === "process") {
+    $(el).addClass("selected")
+  } else if(el.href.split("#")[1] === "rules") {
+    $(el).addClass("selected")
+  }
+})
+
 
 //.platform height 响应页面宽度
 

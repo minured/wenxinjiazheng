@@ -1,3 +1,4 @@
+
 *{
   margin:0;
   padding:0;
@@ -63,7 +64,11 @@ body, html {
 
 .new-header-fixed span.section.sectionFocus {
   font-family: PingFangSC-Medium;
-  color: #FFD161;
+  color: rgb(202,18,53);
+}
+
+.new-header-fixed span.section a.selected {
+  color: rgb(202,18,53);
 }
 
 .new-header-fixed span.section {
